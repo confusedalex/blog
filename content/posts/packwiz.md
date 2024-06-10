@@ -1,6 +1,6 @@
 +++
-title: "Create Minecraft Modpacks with ease!"
-draft: true
+title = "Create Minecraft Modpacks with ease!"
+draft = true
 +++
 
-# Packwiz 
+# Packwiz
