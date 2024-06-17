@@ -10,10 +10,13 @@ Currently, I'm in the process of migrating my Steam Deck to NixOS. Today finally
 # The Problem
 
 I then installed Nix on the Mac and got everything working, but as I wanted to build my NixOS Configuration on the Mac, the build failed. It failed, because I couldn't enter the sudo password. After much browsing the web, I wanted to make sudo passwordless. So I open `visudo` and changed
+
 ```bash
 %admin ALL=(ALL) ALL
 ```
+
 to
+
 ```bash
 %admin ALL=(ALL) :NOPASSWD ALL
 ```
@@ -21,6 +24,7 @@ to
 Do you see the mistake? It's the wrong place column. But I was in a rush, saved the file, wanted to test out my new fancy passwordless sudo by running `sudo echo test` and got greeted by a `alex is not in suderos file`.
 
 # The Journey begins
+
 ## Try 1
 
 I tried out the [here](https://superuser.com/a/1368278) described “Finder” solution but failed. I just couldn't change the permission back. An hour later, I moved on to recovery mode.
@@ -35,4 +39,5 @@ Now I could open a terminal, navigate to `/foo/bar/etc` and repair the file perm
 1. If visudo asks you if you really want to save the File, don't blindly type yes!
 2. root is your friend
 
-I would love to hear about your funny tech fails. Just leave a comment or send me an email.
+I would love to hear about your funny tech fails. Just send me an email.
+
