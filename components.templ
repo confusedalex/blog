@@ -1,0 +1,85 @@
+package main
+
+import (
+"context"
+"io"
+"path"
+)
+
+func Unsafe(html string) templ.Component {
+return templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+_, err = io.WriteString(w, html)
+return
+})
+}
+
+templ base() {
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div style="float: left"><a href={templ.SafeURL("/")}><b>confusedalex</b></a></div>
+    <div style="float: right" class="nav-links">
+      <a href={templ.SafeURL("/posts")}>./blog</a>
+    </div>
+  </header>
+  <br />
+  <hr />
+  { children... }
+  <footer>
+    <hr />
+    <div style="float: left">
+      <a href="https://confusedalex.dev/feed.xml">RSS Feed</a> | <a href="mailto:hey@confusedalex.dev">Email</a>
+    </div>
+  </footer>
+</body>
+
+</html>
+}
+
+templ contentPage(post Post) {
+@base() {
+
+<body>
+  <h1>{ post.Title }</h1>
+  <div class="content">
+    @Unsafe(post.Body)
+  </div>
+</body>
+}
+}
+
+templ indexPage(aboutMe string) {
+@base() {
+<html>
+<p>
+  @Unsafe(aboutMe)
+</p>
+
+</html>
+}
+}
+
+templ blogPage(posts []Post) {
+@base() {
+<html>
+
+<body>
+  for _, post := range posts {
+    if post.Draft != true {  
+  <div>
+    <a href={ templ.SafeURL(path.Join(post.Slug, "/" )) }>
+      { post.Date.Format("2006-01-02") } - { post.Title }
+    </a>
+  </div> }
+  }
+</body>
+
+</html>
+}
+}

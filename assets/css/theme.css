@@ -1,0 +1,36 @@
+html {
+  background: #fbf1c7;
+}
+.secondary {
+  color: #999999;
+}
+a,
+a:link {
+  color: #076678;
+}
+a:visited {
+  color: #458588;
+}
+a:hover {
+  color: #458588;
+}
+blockquote {
+  border-left: 2px solid #999999;
+}
+code {
+  background-color: #444444;
+}
+pre code {
+  background-color: transparent;
+}
+.footnote-definition sup {
+  color: #999999;
+}
+table th,
+table td {
+  border-color: #444444;
+}
+table thead,
+table tr:nth-child(even) {
+  background-color: #1e1e1e;
+}
