@@ -2,7 +2,7 @@
 +++
 
 ### Hi there, I'm Alex
-I'm a Software Developer from Bonn, Germany. In my spare time, I work on some side projects and try to contributue to open-source software and the OpenStreetMap. Outside of coding, I like to go outside for a walk or hike, listing to music or taking a ride on my gravelbike.
+I'm a Software Developer from Bonn, Germany. In my spare time, I work on some side projects and try to contribute to open-source software and OpenStreetMap. Outside of coding, I like to go outside for a walk or hike, listen to music or take a ride on my gravel bike.
 
 <!--### Maybe you want to check out...-->
 <!---->
