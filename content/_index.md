@@ -12,6 +12,7 @@ I'm a Software Developer from Bonn, Germany. In my spare time, I work on some si
 <!--### or some of my writing...-->
 ### Posts
 
+- [Today was my birthday and I didn't cry](./blog/today-was-my-birthday)
 - [How I broke sudo on my Dads Mac and how I fixed it](./blog/how-i-broke-sudo-macos)
 - [SCP, my beloved](./blog/scp-my-beloved)
 
