@@ -23,8 +23,7 @@ Here you can find more of me:
 - Code Repositories: {{ link(link="https://github.com/confusedalex", display="Github") }}, {{ link(link="https://codeberg.org/confusedalex", display="Codeberg") }}
 - Fediverse: {{link(link="https://defcon.social/@confusedalex", display="Mastodon")}}
 
-<!--### Webrings-->
+### Webrings
+Press on the arrows to explore other websites  
 
-<!--Join our webrings and explore more:-->
-
-<!--- 🈯 {{ webring(prev="#", webring="#", webringName="Random Webring", next="#") }}-->
+- {{ webring(prev="https://xn--sr8hvo.ws/previous", webring="https://xn--sr8hvo.ws", webringName="IndieWeb Webring", next="https://xn--sr8hvo.ws/next") }}
