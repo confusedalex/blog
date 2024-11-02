@@ -19,9 +19,9 @@ I'm a Software Developer from Bonn, Germany. In my spare time, I work on some si
 ### Online Presence
 
 Here you can find more of me:
-- Email: [hello@confusedalex.dev](mailto:hello@confusedalex.dev)
+- Email: {{ link(link="mailto:hello@confusedalex.dev", display="hello@confusedalex.dev") }}
 - Code Repositories: [GitHub](https://github.com/confusedalex), [Codeberg](https://codeberg.org/confusedalex)
-- Fediverse: <a rel="me" target="_blank" href="https://defcon.social/@confusedalex">Mastodon</a>
+- Fediverse: {{link(link="https://defcon.social/@confusedalex", display="Mastodon")}}
 
 <!--### Webrings-->
 
