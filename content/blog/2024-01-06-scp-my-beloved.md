@@ -2,6 +2,8 @@
 title = "SCP, my beloved"
 date = 2024-01-06
 toc = true
+[taxonomies]
+tags = [ "linux", "scp", "ssh", "tech" ]
 +++
 
 # Introduction

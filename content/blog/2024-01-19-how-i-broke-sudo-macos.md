@@ -1,6 +1,8 @@
 +++
 title = "How I broke sudo on my Dads Mac and how I fixed it"
 date = 2024-01-19
+[taxonomies]
+tags = [ "mac", "linux", "tech" ]
 +++
 
 # Prologue

@@ -1,6 +1,8 @@
 +++
 title = "Today was my birthday and I didn't cry"
 date = 2024-10-28
+[taxonomies]
+tags = [ "emotional", "love" ]
 +++
 
 I was scared of today. Very scared. I thought I would be crying all day, thinking about you. You've always told me what you wanted to gift me for this birthday, that you wanted to bake a cake for me. You've never wanted to tell me what you wanted to gift me, but you've always mentioned it accidentally. Every time I thought about my birthday in the last few weeks, I always thought about you. I had been excited about my birthday because of you, but now it feels like a regular day.
