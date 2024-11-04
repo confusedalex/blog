@@ -1,5 +1,6 @@
 base_url = "https://confusedalex.dev"
 title = "confusedalex"
+author = "confusedalex"
 description = ""
 
 compile_sass = false
