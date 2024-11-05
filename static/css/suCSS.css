@@ -8,9 +8,9 @@
   --standard-border-radius: 5px;
 
   /* default colors */
-  --bg: #FBF1C7;
-  --bg-light: #CBCDCD;
-  --text: #282828;
+  --bg: #070707;
+  --bg-light: #504945;
+  --text: #D6D6D6;
   --text-light: #D79921;
   --accent: #458588;
   --accent-light: #458588;
@@ -24,8 +24,8 @@
 
   :root,
   ::backdrop {
-    --bg: #282828;
-    --bg-light: #464949;
+    --bg: #070707;
+    --bg-light: #504945;
     --text: #D6D6D6;
     --text-light: #D79921;
     --accent: #458588;
@@ -46,8 +46,8 @@
   :root,
   ::backdrop {
     color-scheme: light;
-    --bg: #FBF1C7;
-    --bg-light: #CBCDCD;
+    --bg: #f7f7f7;
+    --bg-light: #e7e7e7;
     --text: #282828;
     --text-light: #D79921;
     --accent: #458588;
@@ -61,8 +61,8 @@
 [data-theme="light"] {
   /* default (light) theme */
   color-scheme: light;
-  --bg: #FBF1C7;
-  --bg-light: #CBCDCD;
+  --bg: #f7f7f7;
+  --bg-light: #e7e7e7;
   --text: #282828;
   --text-light: #D79921;
   --accent: #458588;
@@ -74,8 +74,8 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg: #282828;
-  --bg-light: #464949;
+  --bg: #070707;
+  --bg-light: #504945;
   --text: #D6D6D6;
   --text-light: #D79921;
   --accent: #458588;
