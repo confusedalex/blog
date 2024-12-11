@@ -16,11 +16,6 @@ I'm confusedalex, a Software Developer from Bonn, Germany. In my spare time, I e
 <!--- [uses](./uses) - what I use on a daily basis-->
 
 <!--### or some of my writing...-->
-### Posts
-
-- [Today was my birthday and I didn't cry](./blog/today-was-my-birthday)
-- [How I broke sudo on my Dads Mac and how I fixed it](./blog/how-i-broke-sudo-macos)
-- [SCP, my beloved](./blog/scp-my-beloved)
 
 ### Online Presence
 
