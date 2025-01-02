@@ -28,3 +28,4 @@ Here you can find more of me:
 Press on the arrows to explore other websites  
 
 - {{ webring(prev="https://xn--sr8hvo.ws/previous", webring="https://xn--sr8hvo.ws", webringName="IndieWeb Webring", next="https://xn--sr8hvo.ws/next") }}
+- {{ webring(prev="https://geekring.net/site/430/previous", webring="https://geekring.net", webringName="geekring", next="https://geekring.net/site/430/next") }}
