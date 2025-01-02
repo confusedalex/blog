@@ -686,3 +686,29 @@ sup {
 sub {
   top: 0.3em;
 }
+
+.webmention {
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.webmention-content {
+  margin-left: 1rem;
+}
+
+.webmention-author-photo {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  transition: 0.2s linear;
+}
+
+.webmention-like {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  transition: 0.2s linear;
+}

@@ -1,13 +1,46 @@
-{% set webmentions = load_data(path="webmentions.json", format="json") %}
+{% set unfiltered_webmentions = load_data(path="static/webmentions.json", format="json") %}
+{% set likes = [] %}
+{% set comments = [] %}
+{% set boosts = [] %}
+
+<!-- The set_global is important here, beause otherwise, it would just be set for the current iteration.
+https://keats.github.io/tera/docs/#assignments
+I needed way to long to figure this out. -->
+{% for mention in unfiltered_webmentions %}
+{% if mention["wm-target"] | trim_end_matches(pat="/") | split(pat="/") | last == page.slug %}
+{% if mention["wm-property"] == "like-of" %}
+{% set_global likes = likes | concat(with=mention) %}
+{% elif mention["wm-property"] == "in-reply-to" %}
+{% set_global comments = comments | concat(with=mention) %}
+{% elif mention["wm-property"] == "repost-of" %}
+{% set_global boosts = boosts | concat(with=mention) %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
 <section class="box">
-  {% if webmentions | length == 0 %}
+  {% if comments | length == 0 %}
   <div class="webmention">
     <p>No webmentions yet. Be the first to comment!</p>
   </div>
   {% else %}
   <h2> Webmentions </h2>
-  {% for mention in webmentions %}
-  {% if mention["wm-target"] == page.permalink %}
+  {% if likes | length > 0 %}
+  <h4>Likes</h4>
+  <div class="webmention-like">
+    {% for mention in likes %}
+    {% if mention["wm-property"] == "like-of" %}
+    <a target="_blank" rel="noopener" href="{{mention.author.url}}"><img src="{{mention.author.photo}}"
+        title="{{mention.author.name}}"></a>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if comments | length > 0 %}
+  <h4>Comments</h4>
+  {% for mention in comments %}
+  {% if mention["wm-property"] == "in-reply-to" %}
   <div class="webmention">
     <img src="{{ mention.author.photo }}" alt="{{ mention.author.name }}" class="webmention-author-photo" />
     <blockquote class="webmention-content">
@@ -19,5 +52,6 @@
   </div>
   {% endif %}
   {% endfor %}
+  {% endif %}
   {% endif %}
 </section>
