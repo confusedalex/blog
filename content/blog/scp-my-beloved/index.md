@@ -1,21 +1,23 @@
-+++
-title = "SCP, my beloved"
-date = 2024-01-06
-toc = true
-[taxonomies]
-tags = [ "linux", "scp", "ssh", "tech" ]
-+++
-
-# Introduction
-
+---
+modified: 2025-01-02T10:39:21+01:00
+created: 2024-12-19T09:24:40+01:00
+title: SCP, my beloved
+date: 2024-01-06
+updated: 2025-01-02
+toc: true
+taxonomies:
+  tags:
+    - linux
+    - scp
+    - ssh
+    - tech
+---
 Have you ever struggled to find the perfect tool for transferring files, which is easy to use and broadly available? If so, you are not alone, and I think I might have found the solution called "scp."
 
-# What is SCP?
-
+## What is SCP?
 SCP is a program shipped with OpenSSH, allowing you to copy files between two hosts over a network. Since it's shipped with OpenSSH, it should be available on most of your computers, making it convenient to use. For SCP to work, you need to point it to a running SSH server. Now let's look at some examples of how to use SCP.
 
-# How to use SCP:
-
+## How to use SCP:
 Copying a local file to a remote host:  
 ```bash
 scp localFile user@remotehost:path/to/target
