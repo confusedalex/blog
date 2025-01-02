@@ -17,6 +17,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   :root,
   ::backdrop {
     --bg: #1e1e2f;
@@ -37,6 +38,7 @@
 }
 
 @media (prefers-color-scheme: light) {
+
   :root,
   ::backdrop {
     color-scheme: light;
@@ -288,7 +290,8 @@ header>nav ol li {
 aside,
 details,
 pre,
-progress {
+progress,
+.box {
   background-color: var(--bg-light);
   border-radius: var(--standard-border-radius);
 }
@@ -314,8 +317,9 @@ aside {
   }
 }
 
-details {
-  padding: .5rem;
+details,
+.box {
+  padding: .5rem 1rem;
 }
 
 summary {
