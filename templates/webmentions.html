@@ -1,0 +1,23 @@
+{% set webmentions = load_data(path="webmentions.json", format="json") %}
+<section class="box">
+  {% if webmentions | length == 0 %}
+  <div class="webmention">
+    <p>No webmentions yet. Be the first to comment!</p>
+  </div>
+  {% else %}
+  <h2> Webmentions </h2>
+  {% for mention in webmentions %}
+  {% if mention["wm-target"] == page.permalink %}
+  <div class="webmention">
+    <img src="{{ mention.author.photo }}" alt="{{ mention.author.name }}" class="webmention-author-photo" />
+    <blockquote class="webmention-content">
+      <strong><a href="{{ mention.author.url }}">{{ mention.author.name }}</a> commented:</strong>
+      {{ mention.content.html | safe }}
+      <p><a href="{{ mention.url }}">Source</a> | Published: <time>{{ mention.published | date(format="%B %d, %Y")
+          }}</time></p>
+    </blockquote>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+</section>
