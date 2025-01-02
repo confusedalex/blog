@@ -2,7 +2,9 @@
 
 {% block content %}
 <article class="h-entry">
-  <div><a href="..">..</a>/<span class="accent-data"><a class="u-url" href="{{ page.permalink }}">{{page.slug}}</a></span></div>
+  <div>
+    <a href="..">..</a>/<span class="accent-data"><a class="u-url" href="{{ page.permalink }}">{{page.slug}}</a></span>
+  </div>
 <time class="dt-published" datetime="{{ page.date }}">Published on: <span class="accent-data">{{ page.date }}</span></time>
 {% if config.extra.author and config.extra.display_author == true %}
 <address rel="author">By <span class="accent-data"><a class="p-author h-card" href="https://confusedalex.dev">{{config.extra.author}}</a></span></address>
