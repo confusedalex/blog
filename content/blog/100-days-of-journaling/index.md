@@ -9,8 +9,11 @@ taxonomies:
     - obsidian
 aliases:
   - 100 Days of journaling
-syndication:
-  mastodon: https://indieweb.social/@confusedalex/113760369110698625
+extra:
+  syndication:
+    mastodon: https://indieweb.social/@confusedalex/113760369110698625
+    reddit: https://www.reddit.com/r/ObsidianMD/comments/1hrclri/100_days_of_journaling
+    hackernews: https://news.ycombinator.com/item?id=42569332
 ---
 Today marks my 100th day of journaling. It helped me overcome a crisis and enhanced my life in ways I never expected.
 
