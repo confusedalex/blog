@@ -712,3 +712,7 @@ sub {
   height: 6rem;
   transition: 0.2s linear;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}
