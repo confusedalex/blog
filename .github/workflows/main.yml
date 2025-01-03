@@ -12,8 +12,10 @@ jobs:
     steps:
     - name: Checkout main
       uses: actions/checkout@v4
+
     - name: Fetch webmentions
-      run: ./fetch_webmentions.sh
+      run: bash fetch_webmentions.sh
+
     - name: Build and deploy
       uses: shalzz/zola-deploy-action@v0.19.2
       env:
