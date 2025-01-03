@@ -3,9 +3,8 @@
 {% set comments = [] %}
 {% set boosts = [] %}
 
-<!-- The set_global is important here, beause otherwise, it would just be set for the current iteration.
-https://keats.github.io/tera/docs/#assignments
-I needed way to long to figure this out. -->
+<!-- The set_global is important here, because otherwise, it would just be set for the current iteration.
+I needed way too long to figure this out. -->
 {% for mention in unfiltered_webmentions %}
 {% if mention["wm-target"] | trim_end_matches(pat="/") | split(pat="/") | last == page.slug %}
 {% if mention["wm-property"] == "like-of" %}
@@ -19,39 +18,75 @@ I needed way to long to figure this out. -->
 {% endfor %}
 
 <section class="box">
-  {% if comments | length == 0 %}
-  <div class="webmention">
-    <p>No webmentions yet. Be the first to comment!</p>
-  </div>
-  {% else %}
-  <h2> Webmentions </h2>
-  {% if likes | length > 0 %}
-  <h4>Likes</h4>
-  <div class="webmention-like">
-    {% for mention in likes %}
-    {% if mention["wm-property"] == "like-of" %}
-    <a target="_blank" rel="noopener" href="{{mention.author.url}}"><img src="{{mention.author.photo}}"
-        title="{{mention.author.name}}"></a>
-    {% endif %}
+  <h2>Webmentions</h2>
+
+  <!-- Likes -->
+  {% if page.extra.syndication %}
+  <div>
+    <span>Discuss this post on </span>
+    {% for key, value in page.extra.syndication %}
+    <a href="{{ value }}" class="capitalize u-syndication" rel="syndication"> {{ key }}</a>{% if not loop.last %}, {%
+    endif %}
     {% endfor %}
   </div>
   {% endif %}
 
-  {% if comments | length > 0 %}
-  <h4>Comments</h4>
-  {% for mention in comments %}
-  {% if mention["wm-property"] == "in-reply-to" %}
+  {% if likes | length == 0 and comments | length == 0 and boosts | length == 0 %}
   <div class="webmention">
-    <img src="{{ mention.author.photo }}" alt="{{ mention.author.name }}" class="webmention-author-photo" />
-    <blockquote class="webmention-content">
-      <strong><a href="{{ mention.author.url }}">{{ mention.author.name }}</a> commented:</strong>
-      {{ mention.content.html | safe }}
-      <p><a href="{{ mention.url }}">Source</a> | Published: <time>{{ mention.published | date(format="%B %d, %Y")
-          }}</time></p>
-    </blockquote>
+    <p>No webmentions yet. Be the first to comment, like or repost!</p>
   </div>
-  {% endif %}
-  {% endfor %}
+  {% else %}
+  <details {% if likes | length > 0 %}open{% endif %}>
+    <summary><span>{{ likes | length}} {% if likes | length == 1%}Like{% else %} Likes {% endif %}</span></summary>
+    {% if likes | length == 0 %}
+    <p>No likes yet. Be the first to like!</p>
+    {% else %}
+    <div class="webmention-like">
+      {% for mention in likes %}
+      {% if mention["wm-property"] == "like-of" %}
+      <a target="_blank" rel="noopener" href="{{mention.author.url}}"><img src="{{mention.author.photo}}"
+          title="{{mention.author.name}}"></a>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </details>
+
+  <!-- Reposts -->
+  <details {% if boosts | length > 0 %}open{% endif %}>
+    <summary><span>{{ boosts | length}} {% if boosts | length == 1%}Repost{% else %} Reposts {% endif %}</span></summary>
+    {% if boosts | length > 0 %}
+    <div class="webmention-repost">
+      {% for mention in boosts %}
+      {% if mention["wm-property"] == "repost-of" %}
+      <a target="_blank" rel="noopener" href="{{mention.author.url}}"><img src="{{mention.author.photo}}"
+          title="{{mention.author.name}}"></a>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </div>
+  </details>
+
+  <!-- Comments -->
+  {% if comments | length > 0 %}
+  <details>
+    <summary><span>{{ comments | length}} {% if comments | length == 1%}Comment{% else %} Comments {% endif %}</span></summary>
+    {% for mention in comments %}
+    {% if mention["wm-property"] == "in-reply-to" %}
+    <div class="webmention">
+      <img src="{{ mention.author.photo }}" alt="{{ mention.author.name }}" class="webmention-author-photo" />
+      <blockquote class="webmention-content">
+        <strong><a href="{{ mention.author.url }}">{{ mention.author.name }}</a> commented:</strong>
+        {{ mention.content.html | safe }}
+        <p>
+          <a href="{{ mention.url }}">Source</a> | Published: 
+          <time>{{ mention.published | date(format="%B %d, %Y") }}</time>
+        </p>
+      </blockquote>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </details>
   {% endif %}
   {% endif %}
 </section>
