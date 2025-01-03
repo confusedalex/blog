@@ -9,5 +9,4 @@ response=$(curl -s "https://webmention.io/api/mentions.jf2?token=${webmentionske
 newMentions=$(echo "$response" | jq '.children')
 
 # Output the new mentions
-echo "$newMentions" >> static/webmentions.json
-
+echo "$newMentions" > static/webmentions.json
