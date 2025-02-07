@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-webmentionskey="${WEBMENTIONSKEY}"
+webmentionskey="${WEBMENTIONS_KEY}"
 
 # Fetch mentions from the API
 response=$(curl -s "https://webmention.io/api/mentions.jf2?token=${webmentionskey}&per-page=1000")
