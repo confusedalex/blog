@@ -53,8 +53,10 @@ I needed way too long to figure this out. -->
   </details>
 
   <!-- Reposts -->
-  <details {% if boosts | length > 0 %}open{% endif %}>
-    <summary><span>{{ boosts | length}} {% if boosts | length == 1%}Repost{% else %} Reposts {% endif %}</span></summary>
+  {% if comments | length > 0 %}
+  <details>
+    <summary><span>{{ boosts | length}} {% if boosts | length == 1%}Repost{% else %} Reposts {% endif %}</span>
+    </summary>
     {% if boosts | length > 0 %}
     <div class="webmention-repost">
       {% for mention in boosts %}
@@ -64,13 +66,15 @@ I needed way too long to figure this out. -->
       {% endif %}
       {% endfor %}
       {% endif %}
+      {% endif %}
     </div>
   </details>
 
   <!-- Comments -->
   {% if comments | length > 0 %}
   <details>
-    <summary><span>{{ comments | length}} {% if comments | length == 1%}Comment{% else %} Comments {% endif %}</span></summary>
+    <summary><span>{{ comments | length}} {% if comments | length == 1%}Comment{% else %} Comments {% endif %}</span>
+    </summary>
     {% for mention in comments %}
     {% if mention["wm-property"] == "in-reply-to" %}
     <div class="webmention">
@@ -79,7 +83,7 @@ I needed way too long to figure this out. -->
         <strong><a href="{{ mention.author.url }}">{{ mention.author.name }}</a> commented:</strong>
         {{ mention.content.html | safe }}
         <p>
-          <a href="{{ mention.url }}">Source</a> | Published: 
+          <a href="{{ mention.url }}">Source</a> | Published:
           <time>{{ mention.published | date(format="%B %d, %Y") }}</time>
         </p>
       </blockquote>
