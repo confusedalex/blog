@@ -14,10 +14,10 @@ jobs:
     - name: Checkout main
       uses: actions/checkout@v4
 
-    - name: Fetch webmentions
-      run: bash fetch-webmentions.sh
-      env:
-        WEBMENTIONSKEY: ${{ secrets.WEBMENTIONSKEY }}
+    # - name: Fetch webmentions
+    #   run: bash fetch-webmentions.sh
+    #   env:
+    #     WEBMENTIONSKEY: ${{ secrets.WEBMENTIONSKEY }}
 
     - name: Build and deploy
       uses: shalzz/zola-deploy-action@v0.19.2
