@@ -1,0 +1,21 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Robin",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/94943b1c4865d2ca158fae73e08f2c2ad25087898b83a6879dd6bd815571a192.jpg",
+      "url": "https://mastodon.social/@iamrobin"
+    },
+    "url": "https://indieweb.social/@confusedalex/113760369110698625#favorited-by-109548872229227035",
+    "published": null,
+    "wm-received": "2025-01-02T21:46:01Z",
+    "wm-id": 1871532,
+    "wm-source": "https://brid.gy/like/mastodon/@confusedalex@indieweb.social/113760369110698625/109548872229227035",
+    "wm-target": "https://confusedalex.dev/blog/100-days-of-journaling/",
+    "wm-protocol": "webmention",
+    "like-of": "https://confusedalex.dev/blog/100-days-of-journaling/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
