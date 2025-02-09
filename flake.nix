@@ -5,7 +5,12 @@
   };
 
   outputs =
-    { self, systems, nixpkgs, ... }@inputs:
+    {
+      self,
+      systems,
+      nixpkgs,
+      ...
+    }:
     let
       eachSystem = f: nixpkgs.lib.genAttrs (import systems) (system: f nixpkgs.legacyPackages.${system});
     in
@@ -17,7 +22,7 @@
             curl
             jq
           ];
-          text = (builtins.readFile ./fetch-webmentions.sh);
+          text = builtins.readFile ./fetch-webmentions.sh;
         };
       });
 
