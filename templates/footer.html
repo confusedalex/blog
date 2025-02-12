@@ -3,7 +3,7 @@
   {% if config.extra.footer_content_license %}
   <div>Except where otherwise noted, content on this site is licensed under a
     {% if config.extra.footer_content_license_link %}
-    <a target="_blank" rel="noopener noreferrer"
+    <a rel="noopener noreferrer"
       href="{{config.extra.footer_content_license_link}}">{{config.extra.footer_content_license}}</a>
     {% else %}
     {{config.extra.footer_content_license}}
@@ -16,7 +16,7 @@
   </div>
   {% if config.generate_feeds %}
   <div>
-    <a class="no-style" target="_blank" rel="noopener noreferrer" href="{{ get_url(path="atom.xml",
+    <a class="no-style" rel="noopener noreferrer" href="{{ get_url(path="atom.xml",
       trailing_slash=false) }}" title="Subscribe via RSS for updates."><svg class="icons">
         <use href="{{ get_url(path='icons.svg#rss', trailing_slash=false) | safe }}"></use>
       </svg></a>

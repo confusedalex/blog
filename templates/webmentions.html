@@ -44,7 +44,7 @@ I needed way too long to figure this out. -->
     <div class="webmention-like">
       {% for mention in likes %}
       {% if mention["wm-property"] == "like-of" %}
-      <a target="_blank" rel="noopener" href="{{mention.author.url}}"><img src="{{mention.author.photo}}"
+      <a rel="noopener" href="{{mention.author.url}}"><img src="{{mention.author.photo}}"
           title="{{mention.author.name}}"></a>
       {% endif %}
       {% endfor %}
@@ -61,7 +61,7 @@ I needed way too long to figure this out. -->
     <div class="webmention-repost">
       {% for mention in boosts %}
       {% if mention["wm-property"] == "repost-of" %}
-      <a target="_blank" rel="noopener" href="{{mention.author.url}}"><img src="{{mention.author.photo}}"
+      <a rel="noopener" href="{{mention.author.url}}"><img src="{{mention.author.photo}}"
           title="{{mention.author.name}}"></a>
       {% endif %}
       {% endfor %}
