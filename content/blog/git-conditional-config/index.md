@@ -3,6 +3,9 @@ title= "TIL: git conditional config with and without home-manager"
 date = 2025-02-19
 [taxonomies]
 tags = ["til", "git", "nix"]
+[extra.syndication]
+hackernews = "https://news.ycombinator.com/item?id=43100630"
+mastodon = "https://indieweb.social/@confusedalex/114030084197782234"
 +++
 
 Today I learnt how to use git conditional config to use multiple identities easily.  
