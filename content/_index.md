@@ -19,11 +19,24 @@ I'm confusedalex (he/him), a Software Developer based in Bonn, Germany. In my sp
 
 ### Online Presence
 
-Here you can find more of me:
-- Email: {{ link(link="mailto:hello@confusedalex.dev", display="hello@confusedalex.dev") }}
-- Code Repositories: {{link(link="https://github.com/confusedalex", display="Github", comma=true)}} {{ link(link="https://codeberg.org/confusedalex", display="Codeberg") }}
+Here are some of the places you can find me online, please feel free to reach out to me if you want to chat or have any questions :)
+- Email: {{ link(link="mailto:hello@confusedalex.dev", display="hello@confusedalex.dev") }} [(PGP)](/confusedalex-public-key.asc)
+- Code Repositories: {{link(link="https://github.com/confusedalex", display="Github")}} 
 - Fediverse: {{link(link="https://indieweb.social/@confusedalex", display="Mastodon")}}
 - IRC: confusedalex on irc.libera.chat
+
+### Things I like
+Here's an incomlete list of things I'm interested in or I want to learn more about:
+- Nix/NixOS
+- self-hosting
+- openstreetmapp
+- indieweb
+- free software
+- functional programming
+- rust/haskell/go/zig
+- emacs
+- bsd (never used, but want to tried it out sometimes)
+- unix history
 
 ### Webrings
 Click on the arrows to explore other websites in the webring  
