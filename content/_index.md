@@ -21,8 +21,9 @@ I'm confusedalex (he/him), a Software Developer based in Bonn, Germany. In my sp
 
 Here you can find more of me:
 - Email: {{ link(link="mailto:hello@confusedalex.dev", display="hello@confusedalex.dev") }}
-- Code Repositories: {{ link(link="https://github.com/confusedalex", display="Github") }}, {{ link(link="https://codeberg.org/confusedalex", display="Codeberg") }}
+- Code Repositories: {{link(link="https://github.com/confusedalex", display="Github")}}, {{ link(link="https://codeberg.org/confusedalex", display="Codeberg") }}
 - Fediverse: {{link(link="https://indieweb.social/@confusedalex", display="Mastodon")}}
+- IRC: confusedalex on irc.libera.chat
 
 ### Webrings
 Click on the arrows to explore other websites in the webring  
