@@ -44,8 +44,3 @@ header_nav = [
   # { url = "/now", name_en = "/now/" },
   { url = "/blog", name_en = "/blog/" }
 ]
-
-# Optional footer license text. It will only show, when using footer_content_license.
-#footer_content_license = "Creative Commons Attribution 4.0 International"
-#footer_content_license_link = "https://creativecommons.org/licenses/by/4.0/"
-footer = "Built with Zola and the anemone theme"
