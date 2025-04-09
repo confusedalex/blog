@@ -8,7 +8,7 @@
 
 {{ hcard() }}  
 
-I'm confusedalex, a Software Developer from Bonn, Germany. In my spare time, I enjoy working on some side projects and try to contribute to open-source software and OpenStreetMap. Outside of coding, I like to go outside for a walk or hike, listen to music or take a ride on my gravel bike.
+I'm confusedalex (he/him), a Software Developer based in Bonn, Germany. In my spare time, I enjoy working on some side projects and try to contribute to open-source software and OpenStreetMap. Outside of coding, I like to go outside for a walk or hike, listen to music or take a ride on my gravel bike.
 
 <!--### Maybe you want to check out...-->
 <!---->
