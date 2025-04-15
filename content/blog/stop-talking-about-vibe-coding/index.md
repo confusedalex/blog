@@ -7,7 +7,7 @@ taxonomies:
   tags: ["humor", "rant", "ai"]
 extra:
   syndication:
-    mastodon: https://indieweb.social/@confusedalex/113760369110698625
+    mastodon: https://indieweb.social/@confusedalex/114193921749178763
 ---
 
 Everyone is talking about vibe coding. It seems impossible to pass a day without reading or hearing about it. But why? I mean, everyone knows that it is a shitty VC funded AI buzzword-bingo idea that's just a rage bait[^fn:1] (and I'm falling victim to the rage bait). Nothing more. Nobody will seriously vibe code. Because if you don't understand the code, you lack the understanding to maintain it. You depend on an AI for maintaining the code and fixing bugs, but the AI will probably perform worse as the projects grow. Therefore, increasing the challenge in maintainability.
