@@ -1,0 +1,40 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Friedrich",
+      "photo": "https://avatars.webmention.io/cdn.masto.host/ed9876dda061ee1e85d9a91a6bdd7695bef1cb157847bc5df55b9c4b5ecda361.jpg",
+      "url": "https://mastodon.social/@freique"
+    },
+    "url": "https://indieweb.social/@confusedalex/114193921749178763#favorited-by-114341929064777253",
+    "published": null,
+    "wm-received": "2025-04-15T14:05:35Z",
+    "wm-id": 1904858,
+    "wm-source": "https://brid.gy/like/mastodon/@confusedalex@indieweb.social/114193921749178763/114341929064777253",
+    "wm-target": "https://confusedalex.dev/blog/stop-talking-about-vibe-coding/",
+    "wm-protocol": "webmention",
+    "like-of": "https://confusedalex.dev/blog/stop-talking-about-vibe-coding/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Robin",
+      "photo": "https://avatars.webmention.io/cdn.masto.host/94943b1c4865d2ca158fae73e08f2c2ad25087898b83a6879dd6bd815571a192.jpg",
+      "url": "https://mastodon.social/@iamrobin"
+    },
+    "url": "https://indieweb.social/@confusedalex/113760369110698625#favorited-by-109548872229227035",
+    "published": null,
+    "wm-received": "2025-01-02T21:46:01Z",
+    "wm-id": 1871532,
+    "wm-source": "https://brid.gy/like/mastodon/@confusedalex@indieweb.social/113760369110698625/109548872229227035",
+    "wm-target": "https://confusedalex.dev/blog/100-days-of-journaling/",
+    "wm-protocol": "webmention",
+    "like-of": "https://confusedalex.dev/blog/100-days-of-journaling/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
