@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>confusedalex - nix</title>
+    <link rel="self" type="application/atom+xml" href="https://confusedalex.dev/tags/nix/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://confusedalex.dev"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-02-19T00:00:00+00:00</updated>
+    <id>https://confusedalex.dev/tags/nix/atom.xml</id>
+    <entry xml:lang="en">
+        <title>TIL: git conditional config with and without home-manager</title>
+        <published>2025-02-19T00:00:00+00:00</published>
+        <updated>2025-02-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              confusedalex
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://confusedalex.dev/blog/git-conditional-config/"/>
+        <id>https://confusedalex.dev/blog/git-conditional-config/</id>
+        
+        <content type="html" xml:base="https://confusedalex.dev/blog/git-conditional-config/">&lt;p&gt;Today I learnt how to use git conditional config to use multiple identities easily.&lt;br &#x2F;&gt;
+I use git for my private project and the projects I need to work at my day job.&lt;br &#x2F;&gt;
+To keep these two projects apart, I have a &lt;code&gt;~&#x2F;projects&lt;&#x2F;code&gt; folder in my home directory with the two subfolder &lt;code&gt;~&#x2F;projects&#x2F;work&lt;&#x2F;code&gt; and &lt;code&gt;~&#x2F;projects&#x2F;personal&lt;&#x2F;code&gt;.
+Now we can tell git to always use the one identity for all projects under &lt;code&gt;~&#x2F;projects&#x2F;personal&lt;&#x2F;code&gt; and another for &lt;code&gt;~&#x2F;projects&#x2F;work&lt;&#x2F;code&gt;.
+We just add two includeIfs in our git config. With includeIf we can specify other files to source if the condition is met. The prepended “gitdir:” just means every git repository under this directory. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;[1]&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#282828;color:#fdf4c1aa;&quot;&gt;&lt;code&gt;&lt;span&gt;[includeIf &amp;quot;gitdir:~&#x2F;projects&#x2F;personal&#x2F;&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;	path = &amp;quot;.&#x2F;personal&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[includeIf &amp;quot;gitdir:~&#x2F;projects&#x2F;work&#x2F;&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;	path = &amp;quot;.&#x2F;work&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In the personal config, we specify our personal identity&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#282828;color:#fdf4c1aa;&quot;&gt;&lt;code&gt;&lt;span&gt;[user]
+&lt;&#x2F;span&gt;&lt;span&gt;	email = &amp;quot;alex@confusedalex.dev&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;	name = &amp;quot;confusedalex&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;	signingKey = &amp;quot;05AF71643F6E2ED3&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and do the same for the work config.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;integrating-with-home-manager&quot;&gt;Integrating with home-manager&lt;&#x2F;h2&gt;
+&lt;p&gt;Because I use &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;nix-community.github.io&#x2F;home-manager&#x2F;index.xhtml&quot;&gt;home-manager&lt;&#x2F;a&gt; I want to specify these conditionals with nix. We just need to add a list we attributes sets for every include.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Everything under contents must follow the structure as in git-config.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;nix&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-nix &quot;&gt;&lt;code class=&quot;language-nix&quot; data-lang=&quot;nix&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;programs&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;git &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;enable &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# ...
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;includes &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[
+&lt;&#x2F;span&gt;&lt;span&gt;      {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;condition &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;gitdir:~&#x2F;projects&#x2F;personal&#x2F;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;contents &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;user &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;confusedalex&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;email &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;alex@confusedalex.dev&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;signingKey &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;05AF71643F6E2ED3&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;          };
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;gpg&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;format &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;openpgp&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        };
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;      {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;condition &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;gitdir:~&#x2F;projects&#x2F;work&#x2F;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;contents &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;#...
+&lt;&#x2F;span&gt;&lt;span&gt;        };
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    ];
+&lt;&#x2F;span&gt;&lt;span&gt;  };
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr&gt;&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;git-scm.com&#x2F;docs&#x2F;git-config#_includes&quot;&gt; https:&#x2F;&#x2F;git-scm.com&#x2F;docs&#x2F;git-config#_includes &lt;&#x2F;a&gt; &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>
