@@ -35,7 +35,7 @@ display_author = true
 favicon = "favicon.ico"
 image = "icon.png"
 
-default_theme = "light"
+default_theme = "dark"
 list_pages = false
 twitter_card = true
 

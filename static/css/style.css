@@ -20,10 +20,6 @@
   color: var(--accent);
 }
 
-.theme-transition {
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
 .tags-data {
   display: flex;
   flex-direction: column;
