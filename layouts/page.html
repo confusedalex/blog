@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<article class="h-entry">
+  <div>
+    <a href="..">..</a>/<span class="accent-data"><a class="u-url" href="{{ .Permalink }}">{{ .Slug }}</a></span>
+
+  </div>
+	<time class="dt-published" datetime="{{ .Date | time.Format "2006-01-02"}}">Published on: <span class="accent-data">{{ .Date | time.Format "2006-01-02" }}</span></time>
+  <h1 class="p-name"> {{.Title }}</h1>
+<div class="e-content">
+  {{ .Content }}
+</div>
+<p class="tags-data">
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+</p>
+<hr>
+<section class="box">
+ <strong>Reply via email</strong> 
+  <p>Thoughts, feedback, questions? I would like to hear about them! Just drop me an email at <a href="mailto:hello@confusedalex.dev"> hello[at]confusedalex.dev</a></p>
+</section>
+
+</article>
+{{ end }}

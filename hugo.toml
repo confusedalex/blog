@@ -1,0 +1,31 @@
+baseURL = 'https://confusedalex.dev/'
+languageCode = 'en-US'
+title = 'confusedalex'
+
+[menus]
+  [[menus.main]]
+    name = '/home/'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = '/posts/'
+    pageRef = '/posts'
+    weight = 20
+
+  [[menus.main]]
+    name = '/rss/'
+    pageRef = '/atom.xml'
+    weight = 30
+
+[params]
+  [params.author]
+    email = 'alex@confusedalex.dev'
+    name = 'confusedalex'
+
+disableKinds = ['rss']
+
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "atom"
+
