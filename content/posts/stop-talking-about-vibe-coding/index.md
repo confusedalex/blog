@@ -1,10 +1,8 @@
 ---
 title: "Stop talking about vibe coding!"
+slug: "stop-talking-about-vibe-coding"
 date: 2025-03-20
 tags: ["humor", "rant", "ai"]
-draft: false
-taxonomies:
-  tags: ["humor", "rant", "ai"]
 extra:
   syndication:
     mastodon: https://indieweb.social/@confusedalex/114193921749178763

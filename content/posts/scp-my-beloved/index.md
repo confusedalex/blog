@@ -1,16 +1,14 @@
 ---
-modified: 2025-01-02T10:39:21+01:00
-created: 2024-12-19T09:24:40+01:00
 title: SCP, my beloved
+slug: "scp-my-beloved"
 date: 2024-01-06
 updated: 2025-01-02
 toc: true
-taxonomies:
-  tags:
-    - linux
-    - scp
-    - ssh
-    - tech
+tags:
+  - linux
+  - scp
+  - ssh
+  - tech
 ---
 Have you ever struggled to find the perfect tool for transferring files, which is easy to use and broadly available? If so, you are not alone, and I think I might have found the solution called "scp."
 

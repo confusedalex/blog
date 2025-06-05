@@ -1,12 +1,10 @@
 ---
-modified: 2025-01-02T10:48:47+01:00
-created: 2025-01-01T21:31:12+01:00
 title: 100 Days of journaling
+slug: 100-days-of-journaling
 date: 2025-01-01
-taxonomies:
-  tags:
-    - emotional
-    - obsidian
+tags:
+  - emotional
+  - obsidian
 aliases:
   - 100 Days of journaling
 extra:

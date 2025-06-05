@@ -1,13 +1,11 @@
 ---
 title: How I broke sudo on my Dads Mac and how I fixed it
+slug: "how-i-broke-sudo-macos"
 date: 2024-01-19
-taxonomies:
-  tags:
-    - mac
-    - linux
-    - tech
-modified: 2025-01-02T10:43:30+01:00
-created: 2024-12-19T09:24:40+01:00
+tags:
+  - mac
+  - linux
+  - tech
 ---
 Currently, I'm in the process of migrating my Steam Deck to NixOS. Today finally arrived my 1 TB NVMe, so I rushed to installing it and reinstalling NixOS as I already had a working configuration. The annoying part is, that, when using [Jovian-NixOS](https://github.com/Jovian-Experiments/Jovian-NixOS) you need to compile the kernel. As this takes long and my father owns a M1 Mac, I thought about building my NixOS configuration on the mac and copying it to the Steam Deck.
 

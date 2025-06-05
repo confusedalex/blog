@@ -1,7 +1,7 @@
 +++
 title= "TIL: git conditional config with and without home-manager"
+slug = "git-conditional-config"
 date = 2025-02-19
-[taxonomies]
 tags = ["til", "git", "nix"]
 [extra.syndication]
 hackernews = "https://news.ycombinator.com/item?id=43100630"
