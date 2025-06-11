@@ -15,7 +15,7 @@ title = 'confusedalex'
 
   [[menus.main]]
     name = '/rss/'
-    pageRef = '/atom.xml'
+    url = '/atom.xml'
     weight = 30
 
 [params]
