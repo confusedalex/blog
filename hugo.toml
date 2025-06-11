@@ -29,3 +29,5 @@ disableKinds = ['rss']
 mediatype = "application/rss"
 baseName = "atom"
 
+[markup.goldmark.renderer]
+  unsafe = true
