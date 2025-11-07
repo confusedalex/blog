@@ -33,7 +33,7 @@ Here's an incomlete list of things I'm interested in or I want to learn more abo
 - functional programming
 - rust/haskell/go/zig
 - emacs
-- bsd (never used, but want to tried it out sometimes)
+- bsd (never used, but want to try it out sometimes)
 - unix history
 
 ### Webrings
