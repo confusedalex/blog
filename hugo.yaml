@@ -4,7 +4,6 @@ title: "confusedalex"
 footnotereturnlinkcontents: "↩"
 
 permalinks:
-  note: "/note/:slug/"
   post: "/post/:slug/"
 
 menu:
