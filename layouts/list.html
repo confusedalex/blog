@@ -1,7 +1,7 @@
 {{ partial "header.html" . }} {{if not .IsHome }}
+<main>
 <h1>{{ .Title | markdownify }}</h1>
 {{ end }} {{ .Content }}
-
 <ul>
   {{ $pages := .Pages }} {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end
   }} {{ range (where $pages "Section" "!=" "") }}
@@ -11,5 +11,5 @@
   </li>
   {{ end }}
 </ul>
-
+</main>
 {{ partial "footer.html" . }}
