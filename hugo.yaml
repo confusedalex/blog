@@ -1,0 +1,44 @@
+baseurl: "https://confusedalex.dev"
+languageCode: "en-us"
+title: "confusedalex"
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  note: "/note/:slug/"
+  post: "/post/:slug/"
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: About
+      url: "about/"
+      weight: 2
+    - name: Subscribe
+      url: "index.xml"
+
+params:
+  description: "A website built through Hugo and blogdown."
+  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- {Year} | [Github](https://github.com/yihui) | [BlueSky](https://bsky.app/profile/yihui.org)"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      # allows for injecting html
+      unsafe: true
+    extensions:
+      passthrough:
+        # allows for including latex
+        enable: true
+        delimiters:
+          block:
+            - - \[
+              - \]
+            - - $$
+              - $$
+          inline:
+            - - \(
+              - \)
