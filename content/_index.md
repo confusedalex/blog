@@ -6,4 +6,6 @@ title: Home
 
 # confusedalex
 
+{{< projects >}}
+
 ### Posts

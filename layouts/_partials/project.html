@@ -1,0 +1,35 @@
+<div
+  class="project-wrapper"
+  id="{{anchorize .title}}"
+  itemscope
+  itemtype="http://schema.org/CreativeWork"
+>
+  <div
+    class="project-image"
+    itemprop="image"
+    itemscope
+    itemtype="http://schema.org/ImageObject"
+  >
+    <img alt="{{ .title }} logo" itemprop="url" src="{{ .image }}" />
+  </div>
+  <div class="project-content">
+    <b>
+      <a href="{{ .url }}">
+        <span itemprop="name">{{ .title }}</span>
+      </a>
+    </b>
+    <meta itemprop="headline" content="{{ .title }}" />
+    {{ if .subtitle }}
+    <span class="project-subtitle" itemprop="abstract">{{ .subtitle }}</span>
+    {{ end }} {{- with .description -}}
+    <div itemprop="description" class="project-description">{{ . }}</div>
+    {{- end -}}
+    <div class="project-links">
+      {{- range .links -}}
+      <span class="project-link">
+        <a href="{{ .url }}" itemprop="url"> {{- .name -}} </a>
+      </span>
+      {{- end -}}
+    </div>
+  </div>
+</div>

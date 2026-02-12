@@ -1,0 +1,9 @@
+- title: "TheGoldEconomy"
+  image: "/tge-logo.png"
+  url: "https://thegoldeconomy.confusedalex.dev/"
+  description: "TheGoldEconomy is a simple Minecraft Spigot Plugin, which implements a on gold items based Economy. It integrates with VaultAPI, PlaceholderAPI and Towny."
+  links:
+    - name: "GitHub"
+      url: "https://github.com/confusedalex/GoldEconomy"
+    - name: "Modrinth"
+      url: "https://modrinth.com/plugin/thegoldeconomy"
