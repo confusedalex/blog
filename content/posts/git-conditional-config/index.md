@@ -14,7 +14,7 @@ To keep these two projects apart, I have a `~/projects` folder in my home direct
 Now we can tell git to always use the one identity for all projects under `~/projects/personal` and another for `~/projects/work`.
 We just add two includeIfs in our git config. With includeIf we can specify other files to source if the condition is met. The prepended "gitdir:" just means every git repository under this directory. [^1]
 
-```
+```ini
 [includeIf "gitdir:~/projects/personal/"]
 	path = "./personal"
 
@@ -24,7 +24,7 @@ We just add two includeIfs in our git config. With includeIf we can specify othe
 
 In the personal config, we specify our personal identity
 
-```
+```ini
 [user]
 	email = "alex@confusedalex.dev"
 	name = "confusedalex"
