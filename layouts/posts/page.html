@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<div class="article-meta">
+  <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+  {{ if (gt .Params.date 0) }} Published:
+  <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+  {{ end }} {{ with .Description}} {{ . | markdownify }} {{end}} {{ partial
+  "tags.html" (dict "taxonomy" "tags" "page" .) }}
+</div>
+
+<main>{{ .Content }}</main>
+
+{{ partial "footer.html" . }}
