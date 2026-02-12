@@ -12,17 +12,13 @@ menu:
       url: ""
       weight: 1
     - name: Posts
-      url: "posts/"
+      url: "post/"
       weight: 2
     - name: About
       url: "about/"
       weight: 3
     - name: Subscribe
       url: "index.xml"
-
-params:
-  description: "A website built through Hugo and blogdown."
-  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- {Year} | [Github](https://github.com/yihui) | [BlueSky](https://bsky.app/profile/yihui.org)"
 
 markup:
   highlight:
