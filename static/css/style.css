@@ -82,6 +82,13 @@ tr:nth-child(even) {
     background: #eee;
 }
 
+.box {
+    background-color: #eee;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+}
+
 .avatar {
     max-width: 15%;
     min-width: 40px;
