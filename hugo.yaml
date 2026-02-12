@@ -12,7 +12,7 @@ menu:
       url: ""
       weight: 1
     - name: Posts
-      url: "post/"
+      url: "posts/"
       weight: 2
     - name: About
       url: "about/"
