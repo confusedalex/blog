@@ -16,5 +16,20 @@
       <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
       {{ end }}
     </ul>
-    <hr/>
+    <theme-picker aria-label="Theme picker" role="radiogroup">
+      <label><input type="radio" name="theme" id="theme-light">Light</label>
+      <label><input type="radio" name="theme" id="theme-dark">Dark</label>
+    </theme-picker>
+    <script>
+      const lightRadio = document.getElementById("theme-light");
+      const darkRadio = document.getElementById("theme-dark");
+      const savedTheme = localStorage.getItem("theme");
+      
+      if (savedTheme === "light") lightRadio.checked = true;
+      else if (savedTheme === "dark") darkRadio.checked = true;
+      
+      lightRadio.addEventListener("change", () => localStorage.setItem("theme", "light"));
+      darkRadio.addEventListener("change", () => localStorage.setItem("theme", "dark"));
+    </script>
     </nav>
+    <hr/>
