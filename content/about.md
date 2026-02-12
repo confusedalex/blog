@@ -3,10 +3,10 @@ title: About me
 ---
 
 ## Things I like
-Here's an incomlete list of things I'm interested in or I want to learn more about:
+Here's an incomplete list of things I'm interested in or I want to learn more about:
 - Nix/NixOS
 - self-hosting
-- openstreetmapp
+- OpenStreetMap
 - indieweb
 - free software
 - functional programming
