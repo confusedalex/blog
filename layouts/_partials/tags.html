@@ -1,0 +1,9 @@
+{{- $page := .page }} {{- $taxonomy := .taxonomy }}
+<span>
+  {{ with $page.GetTerms $taxonomy }} {{ $len := (len .) }} Tagged: {{ range $i,
+  $e := . }}
+  <a href="{{ .RelPermalink }}"
+    >{{ .LinkTitle | lower }}{{ if ne (add $i 1) $len }},{{end}}</a
+  >
+  {{ end }} {{- end }}
+</span>
