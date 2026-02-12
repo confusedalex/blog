@@ -22,7 +22,7 @@ menu:
 
 markup:
   highlight:
-    codeFences: false
+    style: colorful
   goldmark:
     renderer:
       # allows for injecting html
