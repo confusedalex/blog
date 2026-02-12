@@ -7,7 +7,7 @@
     margin: 1.5rem 0;
     padding: 1rem;
     border-radius: 0.25rem;
-    background-color: #e2e8f0;
+    background-color: light-dark(#e2e8f0, #1e293b);
     box-sizing: border-box;
 }
 
