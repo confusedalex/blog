@@ -12,9 +12,12 @@ menu:
     - name: Home
       url: ""
       weight: 1
+    - name: Posts
+      url: "post/"
+      weight: 2
     - name: About
       url: "about/"
-      weight: 2
+      weight: 3
     - name: Subscribe
       url: "index.xml"
 
