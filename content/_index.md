@@ -2,7 +2,7 @@
 title: Home
 ---
 
-<img class="avatar" src="/avatar.png" />
+<img class="avatar" src="/avatar.png" alt="confusedalex avatar"/>
 
 # confusedalex
 
