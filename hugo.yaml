@@ -26,7 +26,7 @@ menu:
 
 markup:
   highlight:
-    style: colorful
+    noClasses: false
   goldmark:
     renderer:
       # allows for injecting html

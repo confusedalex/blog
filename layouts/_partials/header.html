@@ -14,9 +14,14 @@
     />
     <link rel="pingback" href="https://webmention.io/confusedalex.dev/xmlrpc" />
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "css/project.css" | relURL }}" />
+
+    {{ with resources.Match "css/*" }}
+      {{ with resources.Concat "css/style.css" . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" />
+      {{ end }}
+    {{ end }}
+
+
     <link rel="sitemap" href="/sitemap.xml" type="application/xml" />
     <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" />

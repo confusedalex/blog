@@ -1,9 +1,11 @@
 :root {
     color-scheme: light dark;
     &:has(#theme-light:checked) {
+        @import 'syntax-light.css';
         color-scheme: light;
     }
     &:has(#theme-dark:checked) {
+        @import 'syntax-dark.css';
         color-scheme: dark;
     }
     --secondary-bg: light-dark(#eee, #333);
