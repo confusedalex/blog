@@ -21,7 +21,7 @@ menu:
     - name: About
       url: "about/"
       weight: 3
-    - name: Subscribe
+    - name: Rss
       url: "index.xml"
 
 markup:
