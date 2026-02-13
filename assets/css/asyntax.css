@@ -1,0 +1,234 @@
+/* Light theme - when light is selected OR system light and no selection */
+:root:has(#theme-light:checked) .bg,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .bg { background-color:#fff; }
+:root:has(#theme-light:checked) .chroma,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma { background-color:#fff;-webkit-text-size-adjust:none; }
+:root:has(#theme-light:checked) .chroma .err,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .err { color:#f00;background-color:#faa }
+:root:has(#theme-light:checked) .chroma .lnlinks,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .lnlinks { outline:none;text-decoration:none;color:inherit }
+:root:has(#theme-light:checked) .chroma .lntd,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .lntd { vertical-align:top;padding:0;margin:0;border:0; }
+:root:has(#theme-light:checked) .chroma .lntable,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .lntable { border-spacing:0;padding:0;margin:0;border:0; }
+:root:has(#theme-light:checked) .chroma .hl,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .hl { background-color:#e5e5e5 }
+:root:has(#theme-light:checked) .chroma .lnt,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .lnt { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f }
+:root:has(#theme-light:checked) .chroma .ln,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .ln { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f }
+:root:has(#theme-light:checked) .chroma .line,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .line { display:flex; }
+:root:has(#theme-light:checked) .chroma .k,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .k { color:#080;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .kc,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .kc { color:#080;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .kd,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .kd { color:#080;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .kn,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .kn { color:#080;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .kp,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .kp { color:#038;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .kr,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .kr { color:#080;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .kt,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .kt { color:#339;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .na,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .na { color:#00c }
+:root:has(#theme-light:checked) .chroma .nc,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .nc { color:#b06;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .no,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .no { color:#036;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .nd,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .nd { color:#555;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .ni,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .ni { color:#800;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .ne,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .ne { color:#f00;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .nl,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .nl { color:#970;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .nn,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .nn { color:#0e84b5;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .nt,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .nt { color:#070 }
+:root:has(#theme-light:checked) .chroma .nb,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .nb { color:#007020 }
+:root:has(#theme-light:checked) .chroma .bp,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .bp { color:#007020 }
+:root:has(#theme-light:checked) .chroma .nv,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .nv { color:#963 }
+:root:has(#theme-light:checked) .chroma .vc,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .vc { color:#369 }
+:root:has(#theme-light:checked) .chroma .vg,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .vg { color:#d70;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .vi,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .vi { color:#33b }
+:root:has(#theme-light:checked) .chroma .vm,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .vm { color:#963 }
+:root:has(#theme-light:checked) .chroma .nf,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .nf { color:#06b;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .fm,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .fm { color:#06b;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .s,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .s { background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .sa,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .sa { background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .sb,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .sb { background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .sc,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .sc { color:#04d;background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .dl,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .dl { background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .sd,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .sd { color:#d42;background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .s2,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .s2 { background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .se,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .se { color:#666;background-color:#fff0f0;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .sh,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .sh { background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .si,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .si { background-color:#eee }
+:root:has(#theme-light:checked) .chroma .sx,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .sx { color:#d20;background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .sr,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .sr { color:#000;background-color:#fff0ff }
+:root:has(#theme-light:checked) .chroma .s1,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .s1 { background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .ss,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .ss { color:#a60;background-color:#fff0f0 }
+:root:has(#theme-light:checked) .chroma .m,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .m { color:#60e;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .mb,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .mb { color:#60e;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .mf,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .mf { color:#60e;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .mh,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .mh { color:#058;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .mi,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .mi { color:#00d;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .il,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .il { color:#60e;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .mo,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .mo { color:#40e;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .o,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .o { color:#333 }
+:root:has(#theme-light:checked) .chroma .ow,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .ow { color:#000;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .c,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .c { color:#888 }
+:root:has(#theme-light:checked) .chroma .ch,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .ch { color:#888 }
+:root:has(#theme-light:checked) .chroma .cm,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .cm { color:#888 }
+:root:has(#theme-light:checked) .chroma .c1,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .c1 { color:#888 }
+:root:has(#theme-light:checked) .chroma .cs,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .cs { color:#c00;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .cp,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .cp { color:#579 }
+:root:has(#theme-light:checked) .chroma .cpf,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .cpf { color:#579 }
+:root:has(#theme-light:checked) .chroma .gd,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gd { color:#a00000 }
+:root:has(#theme-light:checked) .chroma .ge,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .ge { font-style:italic }
+:root:has(#theme-light:checked) .chroma .gr,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gr { color:#f00 }
+:root:has(#theme-light:checked) .chroma .gh,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gh { color:#000080;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .gi,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gi { color:#00a000 }
+:root:has(#theme-light:checked) .chroma .go,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .go { color:#888 }
+:root:has(#theme-light:checked) .chroma .gp,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gp { color:#c65d09;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .gs,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gs { font-weight:bold }
+:root:has(#theme-light:checked) .chroma .gu,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gu { color:#800080;font-weight:bold }
+:root:has(#theme-light:checked) .chroma .gt,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gt { color:#04d }
+:root:has(#theme-light:checked) .chroma .gl,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .gl { text-decoration:underline }
+:root:has(#theme-light:checked) .chroma .w,
+:root:not(:has(#theme-dark:checked)):not(:has(#theme-light:checked)) .chroma .w { color:#bbb }
+
+/* Dark theme - when dark is selected */
+:root:has(#theme-dark:checked) .bg { color:#e6edf3;background-color:#0d1117; }
+:root:has(#theme-dark:checked) .chroma { color:#e6edf3;background-color:#0d1117;-webkit-text-size-adjust:none; }
+:root:has(#theme-dark:checked) .chroma .err { color:#f85149 }
+:root:has(#theme-dark:checked) .chroma .lnlinks { outline:none;text-decoration:none;color:inherit }
+:root:has(#theme-dark:checked) .chroma .lntd { vertical-align:top;padding:0;margin:0;border:0; }
+:root:has(#theme-dark:checked) .chroma .lntable { border-spacing:0;padding:0;margin:0;border:0; }
+:root:has(#theme-dark:checked) .chroma .hl { background-color:#6e7681 }
+:root:has(#theme-dark:checked) .chroma .lnt { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679 }
+:root:has(#theme-dark:checked) .chroma .ln { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681 }
+:root:has(#theme-dark:checked) .chroma .line { display:flex; }
+:root:has(#theme-dark:checked) .chroma .k { color:#ff7b72 }
+:root:has(#theme-dark:checked) .chroma .kc { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .kd { color:#ff7b72 }
+:root:has(#theme-dark:checked) .chroma .kn { color:#ff7b72 }
+:root:has(#theme-dark:checked) .chroma .kp { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .kr { color:#ff7b72 }
+:root:has(#theme-dark:checked) .chroma .kt { color:#ff7b72 }
+:root:has(#theme-dark:checked) .chroma .nc { color:#f0883e;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .no { color:#79c0ff;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .nd { color:#d2a8ff;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .ni { color:#ffa657 }
+:root:has(#theme-dark:checked) .chroma .ne { color:#f0883e;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .nl { color:#79c0ff;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .nn { color:#ff7b72 }
+:root:has(#theme-dark:checked) .chroma .py { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .nt { color:#7ee787 }
+:root:has(#theme-dark:checked) .chroma .nv { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .vc { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .vg { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .vi { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .vm { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .nf { color:#d2a8ff;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .fm { color:#d2a8ff;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .l { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .ld { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .s { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .sa { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .sb { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .sc { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .dl { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .sd { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .s2 { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .se { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .sh { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .si { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .sx { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .sr { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .s1 { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .ss { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .m { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .mb { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .mf { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .mh { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .mi { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .il { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .mo { color:#a5d6ff }
+:root:has(#theme-dark:checked) .chroma .o { color:#ff7b72;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .ow { color:#ff7b72;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .c { color:#8b949e;font-style:italic }
+:root:has(#theme-dark:checked) .chroma .ch { color:#8b949e;font-style:italic }
+:root:has(#theme-dark:checked) .chroma .cm { color:#8b949e;font-style:italic }
+:root:has(#theme-dark:checked) .chroma .c1 { color:#8b949e;font-style:italic }
+:root:has(#theme-dark:checked) .chroma .cs { color:#8b949e;font-weight:bold;font-style:italic }
+:root:has(#theme-dark:checked) .chroma .cp { color:#8b949e;font-weight:bold;font-style:italic }
+:root:has(#theme-dark:checked) .chroma .cpf { color:#8b949e;font-weight:bold;font-style:italic }
+:root:has(#theme-dark:checked) .chroma .gd { color:#ffa198;background-color:#490202 }
+:root:has(#theme-dark:checked) .chroma .ge { font-style:italic }
+:root:has(#theme-dark:checked) .chroma .gr { color:#ffa198 }
+:root:has(#theme-dark:checked) .chroma .gh { color:#79c0ff;font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .gi { color:#56d364;background-color:#0f5323 }
+:root:has(#theme-dark:checked) .chroma .go { color:#8b949e }
+:root:has(#theme-dark:checked) .chroma .gp { color:#8b949e }
+:root:has(#theme-dark:checked) .chroma .gs { font-weight:bold }
+:root:has(#theme-dark:checked) .chroma .gu { color:#79c0ff }
+:root:has(#theme-dark:checked) .chroma .gt { color:#ff7b72 }
+:root:has(#theme-dark:checked) .chroma .gl { text-decoration:underline }
+:root:has(#theme-dark:checked) .chroma .w { color:#6e7681 }
