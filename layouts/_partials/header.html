@@ -1,36 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="confusedalex's personal blog" />
+    <meta name="robots" content="index, follow" />
+    <meta name="fediverse:creator" content="@confusedalex@indieweb.social" />
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+    <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+    <link
+      rel="webmention"
+      href="https://webmention.io/confusedalex.dev/webmention"
+    />
+    <link rel="pingback" href="https://webmention.io/confusedalex.dev/xmlrpc" />
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/project.css" | relURL }}" />
-    <link rel="alternate" type="application/rss+xml" href="/index.xml" />      
+    <link rel="sitemap" href="/sitemap.xml" type="application/xml" />
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" />
+    <link rel="alternate" type="application/rss+xml" href="/index.xml" />
   </head>
 
   <body>
     <nav>
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-    <theme-picker aria-label="Theme picker" role="radiogroup">
-      <label><input type="radio" name="theme" id="theme-light">Light</label>
-      <label><input type="radio" name="theme" id="theme-dark">Dark</label>
-    </theme-picker>
-    <script>
-      const lightRadio = document.getElementById("theme-light");
-      const darkRadio = document.getElementById("theme-dark");
-      const savedTheme = localStorage.getItem("theme");
-      
-      if (savedTheme === "light") lightRadio.checked = true;
-      else if (savedTheme === "dark") darkRadio.checked = true;
-      
-      lightRadio.addEventListener("change", () => localStorage.setItem("theme", "light"));
-      darkRadio.addEventListener("change", () => localStorage.setItem("theme", "dark"));
-    </script>
+      <ul class="menu">
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+      <theme-picker aria-label="Theme picker" role="radiogroup">
+        <label><input type="radio" name="theme" id="theme-light" />Light</label>
+        <label><input type="radio" name="theme" id="theme-dark" />Dark</label>
+      </theme-picker>
+      <script>
+        const lightRadio = document.getElementById("theme-light");
+        const darkRadio = document.getElementById("theme-dark");
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") lightRadio.checked = true;
+        else if (savedTheme === "dark") darkRadio.checked = true;
+
+        lightRadio.addEventListener("change", () =>
+          localStorage.setItem("theme", "light"),
+        );
+        darkRadio.addEventListener("change", () =>
+          localStorage.setItem("theme", "dark"),
+        );
+      </script>
     </nav>
-    <hr/>
+    <hr />
+  </body>
+</html>
