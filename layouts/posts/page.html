@@ -1,10 +1,22 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
   <h1><span class="title">{{ .Title | markdownify }}</span></h1>
-  {{ if (gt .Params.date 0) }} Published:
   <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-  {{ end }} {{ with .Description}} {{ . | markdownify }} {{end}} {{ partial
-  "tags.html" (dict "taxonomy" "tags" "page" .) }}
+
+  {{ if ne .Date .Lastmod }}
+    | Edited:
+    <span class="date">{{ .Lastmod.Format "2006-01-02" }}</span>
+    {{ with .GitInfo }}
+      in
+      <a href="{{ $.Site.Params.GitURL }}/commit/{{ .Hash }}">
+        {{ .AbbreviatedHash }}
+      </a>
+    {{ end }}
+  {{ end }}
+  |
+  {{ partial
+    "tags.html" (dict "taxonomy" "tags" "page" .)
+  }}
 </div>
 
 <main>{{ .Content }}</main>
@@ -14,7 +26,9 @@
   <p>
     Thoughts, feedback, questions? I would like to hear about them! Just drop me
     an email at
-    <a href="mailto:hello@confusedalex.dev?subject=Re: {{ .Title }}"> hello[at]confusedalex.dev</a>
+    <a href="mailto:hello@confusedalex.dev?subject=Re: {{ .Title }}">
+      hello[at]confusedalex.dev</a
+    >
   </p>
 </section>
 

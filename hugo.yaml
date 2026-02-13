@@ -1,10 +1,14 @@
 baseurl: "https://confusedalex.dev"
 languageCode: "en-us"
 title: "confusedalex"
+enableGitInfo: true
 footnotereturnlinkcontents: "↩"
 
 permalinks:
   posts: "/posts/:slug/"
+
+params:
+  giturl: "https://github.com/confusedalex/blog"
 
 menu:
   main:
