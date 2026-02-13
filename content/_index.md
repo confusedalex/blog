@@ -1,43 +1,38 @@
-+++
-+++
-### Hi there, I'm Alex
+---
+title: Home
+---
 
-{{< avatar >}}
+[<img src="https://simpleicons.org/icons/github.svg" style="max-width:15%;min-width:40px;float:right;" alt="Github repo" />](https://github.com/yihui/hugo-xmin)
 
-{{< hcard >}}  
+# HUGO XMIN
 
-I'm confusedalex (he/him), a Software Developer based in Bonn, Germany. In my spare time, I enjoy working on some side projects and try to contribute to open-source software and OpenStreetMap. Outside of coding, I like to go outside for a walk or hike, listen to music or take a ride on my gravel bike.
+## _Keep it simple, but not simpler_
 
-<!--### Maybe you want to check out...-->
-<!---->
-<!--- [now](./now) - what I am doing now-->
-<!--- [uses](./uses) - what I use on a daily basis-->
+**XMin** is a Hugo theme written by [Yihui Xie](https://yihui.org) in about four hours: half an hour was spent on the Hugo templates, and 3.5 hours were spent on styling. The main motivation for writing this theme was to provide a really minimal example to beginners of Hugo templates. This XMin theme contains about 140 lines of code in total, including the code in HTML templates and CSS (also counting empty lines).
 
-<!--### or some of my writing...-->
 
-### Online Presence
+``` bash
+find . -not -path '*/exampleSite/*' \( -name '*.html' -o -name '*.css' \) | xargs wc -l
+```
 
-Here are some of the places you can find me online, please feel free to reach out to me if you want to chat or have any questions :)
-- Email: {{< link link="mailto:hello@confusedalex.dev" display="hello@confusedalex.dev" >}} [(PGP)](/confusedalex-public-key.asc)
-- Code Repositories: {{< link link="https://github.com/confusedalex" display="Github" >}} 
-- Fediverse: {{< link link="https://indieweb.social/@confusedalex" display="Mastodon" >}}
-- IRC: confusedalex on irc.libera.chat
+```
+      12 ./layouts/single.html
+      20 ./layouts/list.html
+      13 ./layouts/terms.html
+       5 ./layouts/404.html
+       0 ./layouts/_partials/foot_custom.html
+       0 ./layouts/_partials/head_custom.html
+       9 ./layouts/_partials/footer.html
+      20 ./layouts/_partials/header.html
+      51 ./static/css/style.css
+       7 ./static/css/fonts.css
+     137 total
+```
 
-### Things I like
-Here's an incomlete list of things I'm interested in or I want to learn more about:
-- Nix/NixOS
-- self-hosting
-- openstreetmapp
-- indieweb
-- free software
-- functional programming
-- rust/haskell/go/zig
-- emacs
-- bsd (never used, but want to try it out sometimes)
-- unix history
+I can certainly further reduce the code, for example, by eliminating the CSS, but I believe a tiny bit of CSS can greatly improve readability. You cannot really find many CSS frameworks that only contain 50 lines of code.
 
-### Webrings
-Click on the arrows to explore other websites in the webring  
+Although it is a minimal theme, it is actually fully functional. It supports pages (including the home page), blog posts, a navigation menu, categories, tags, and RSS. With [a little bit customization](https://github.com/yihui/hugo-xmin/blob/master/exampleSite/layouts/_partials/foot_custom.html), it can easily support LaTeX math expressions, e.g.,
 
-- {{< webring prev="https://xn--sr8hvo.ws/previous" webring="https://xn--sr8hvo.ws" webringName="IndieWeb Webring" next="https://xn--sr8hvo.ws/next" >}}
-- {{< webring prev="https://geekring.net/site/430/previous" webring="https://geekring.net" webringName="geekring" next="https://geekring.net/site/430/next" >}}
+`$${\sqrt {n}}\left(\left({\frac {1}{n}}\sum _{i=1}^{n}X_{i}\right)-\mu \right)\ {\xrightarrow {d}}\ N\left(0,\sigma ^{2}\right)$$`
+
+All pages not under the root directory of the website are listed below. You can also visit the list page of a single section, e.g., [posts](/post/), or [notes](/note/). See the [About](/about/) page for the usage of this theme.

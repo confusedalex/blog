@@ -1,11 +1,9 @@
-<hr>
-<div>
-  <div class="retro-buttons-container">
-    <a href="https://512kb.club"><img class="retro-button" sizes="88x31" src="https://512kb.club/assets/images/green-team.gif"
-        alt="a proud member of the green team of 512KB club" /></a>
-    <a href="https://neovim.io/"><img class="retro-button" sizes="88x31" src="/buttons/vim-button.gif" alt="A button that indicated that this site was edited with VIM" /></a>
-    <a href="https://transkidsdeservebetter.org/"><img class="retro-button" sizes="88x31" src="/buttons/trans-rights-now.gif" alt="A button that advocates for trans rights" /></a>
-    <a href="https://www.gnu.org/software/emacs/"><img class="retro-button" sizes="88x31" src="/buttons/created-with-emacs.gif" alt="A button that states, that this website was created with EMACS" /></a>
-    <a href="https://confusedalex.dev"><img class="retro-button" sizes="88x31" src="/buttons/confusedalex.gif"/></a>
-  </div>
-</div>
+  <footer>
+  {{ partial "foot_custom.html" . }}
+  {{ with .Site.Params.footer }}
+  <hr/>
+  {{ replace . "{Year}" now.Year | markdownify }}
+  {{ end }}
+  </footer>
+  </body>
+</html>
