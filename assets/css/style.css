@@ -57,7 +57,7 @@ theme-picker {
 }
 .article-meta a,
 .menu a {
-    color: blue;
+    color: light-dark(black, white);
 }
 .menu,
 .article-meta,
