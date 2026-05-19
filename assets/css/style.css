@@ -50,11 +50,14 @@ theme-picker {
 }
 .article-meta,
 .menu a {
-    color: blue;
     text-decoration: none;
     background: var(--secondary-bg);
     padding: 5px;
     border-radius: 5px;
+}
+.article-meta a,
+.menu a {
+    color: blue;
 }
 .menu,
 .article-meta,
