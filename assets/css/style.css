@@ -39,14 +39,18 @@ theme-picker {
     right: 0;
 }
 .menu {
+    display: flex;
+    gap: 1em;
     padding: 0;
     margin: 0;
+    flex-direction: row;
 }
 .menu li {
-    display: inline-block;
+    display: grid;
 }
 .article-meta,
 .menu a {
+    color: blue;
     text-decoration: none;
     background: var(--secondary-bg);
     padding: 5px;
