@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "Atkinson";
+    src: url('/fonts/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+}
+
 body {
-  font-family: Optima, Candara, Calibri, Arial, sans-serif;
+  font-family: Atkinson, Calibri, Arial, sans-serif;
 }
 code {
   font-family: "Lucida Console", Monaco, monospace;
