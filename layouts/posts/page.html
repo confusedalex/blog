@@ -1,4 +1,5 @@
 {{ partial "header.html" . }}
+<div class="content">
 <div class="article-meta">
   <h1><span class="title">{{ .Title | markdownify }}</span></h1>
   <span class="date">{{ .Date.Format "2006-01-02" }}</span>
@@ -31,5 +32,6 @@
     >
   </p>
 </section>
+</div>
 
 {{ partial "footer.html" . }}
