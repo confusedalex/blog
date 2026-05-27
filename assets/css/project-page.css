@@ -194,6 +194,10 @@ div.article-meta {
     }
 }
 
+div.badges img {
+    height: 25;
+}
+
 
 span.subtitle {
     display: inline-block;
