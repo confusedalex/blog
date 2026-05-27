@@ -5,13 +5,26 @@
  */
 
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500'); 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500');
+
+:root {
+    --primary-blue: #1a3a96;
+    --primary-blue-hover: #0d1f52;
+    --secondary-text: #707070;
+    --tertiary-text: #4a4a4a;
+    --light-gray: #f5f5f5;
+    --lighter-gray: #fafafa;
+    --code-blue: #0000a8;
+    --border-gray: #888888;
+    --note-dark: #1a1a1a;
+    --note-medium: #404040;
+}
 
 body {
     font-family: "Roboto Mono", monospace;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
-    color:  rgba(51, 51, 51, 1.00);
+    color: var(--tertiary-text);
     line-height: 1.4em;
     font-weight: light;
     counter-reset: section;
@@ -21,26 +34,26 @@ body {
 
 a, a:visited {
     text-decoration: none;
-    color: rgba(48,63,159, 1.00);
+    color: var(--primary-blue);
 }
 
 i, i a {
-    color: #999999;
+    color: var(--border-gray);
     font-style: normal;
 }
 .org-italic, .org-org-meta-line {
-    color: rgba(48,63,159, 0.75);
+    color: var(--primary-blue);
     font-style: normal;
 }
 
 /* --- Side notes --- */
 div.side-note::before {
     content: "Note";
-    color: rgba(0,0,0,.75);
+    color: var(--note-dark);
     font-weight: 400;
 }
 div.side-note {
-    color: rgba(0,0,0,.5);
+    color: var(--note-medium);
     float: left;
     font-size: .85em;
     line-height: 1.25em;
@@ -86,9 +99,8 @@ div.side-note {
     margin-left: -2.0em;
     text-align: right;
     text-transform: uppercase;
-    color:#2255bb;
+    color: var(--primary-blue);
 }
-#TableOfContents ul li ul,
 #TableOfContents ul li ul li {
     display: static;
     width: 100%;
@@ -108,11 +120,11 @@ div.side-note {
 }
 
 blockquote {
-    color: #999999;
+    color: var(--border-gray);
     padding-top: 0;
     margin-left: 1em;
     padding-left: 1em;
-    border-left: 3px solid #cccccc;
+    border-left: 3px solid var(--border-gray);
 }
 
 ul {
@@ -132,7 +144,7 @@ ul l li p {
 ul li::before {
     display: inline-block;
     content: "— ";
-    color: #999999;
+    color: var(--border-gray);
     width: 1em;
     margin-left: -1em;
 }
@@ -149,7 +161,7 @@ ol li  {
 }
 ol li::before {
     content: counter(li) ". ";
-    color: #999999;
+    color: var(--border-gray);
     display: inline-block;
     width: 2em;
     margin-left: -2em;
@@ -187,7 +199,7 @@ span.subtitle {
     margin-top: .25em;
     font-size: 74.5%;
     font-weight: 300;
-    color: #999999;
+    color: var(--border-gray);
 }
 
 
@@ -209,7 +221,7 @@ h2 {
   counter-reset: subsection;
 }
 h2::before {
-    color: #cccccc;
+    color: var(--secondary-text);
     float: left;
     text-align: right;
     font-weight: 300;
@@ -221,7 +233,7 @@ h2::before {
 
 
 h3::before {
-    color: #cccccc;
+    color: var(--secondary-text);
     float: left;
     text-align: right;
     font-weight: 300;
@@ -232,13 +244,13 @@ h3::before {
 }
 
 code {
-    background-color: #f9f9f9;
+    background-color: var(--light-gray);
     font-family: "Roboto Mono", sans-serif;
     font-weight: 400;
 }
 
 pre::before {
-    color: #cccccc;
+    color: var(--secondary-text);
     float: left;
     text-align: right;
     font-weight: 300;
@@ -255,8 +267,8 @@ div.highlight > pre.chroma > code::before {
 }
 
 pre {
-    color: #00008b;
-    background-color: #fbfbfb;
+    color: var(--code-blue);
+    background-color: var(--lighter-gray);
     overflow: auto;
     margin: 0em;
     padding: 0.25em;
@@ -264,7 +276,7 @@ pre {
     line-height: 1.35em;
     font-family: "Roboto Mono", sans-serif;
     font-weight: 300;
-    border-left: 2px dotted #00008b;
+    border-left: 2px dotted var(--code-blue);
 }
 pre.chroma {
     position: relative;
@@ -273,9 +285,9 @@ pre.chroma {
 
 /* --- Code folding --- */
 details {
-    color: rgba(48,63,159, 1.00);
-    background: #fbfbfb;
-    border: 1px solid rgba(48,63,159, 1.00);
+    color: var(--primary-blue);
+    background: var(--lighter-gray);
+    border: 1px solid var(--primary-blue);
     border-radius: 3px;
     padding:  0.25em;
     margin-bottom: 1.0em;
@@ -285,11 +297,11 @@ details pre {
 }
 summary {
     outline: 0;
-    color: rgba(48,63,159, 1.00);
+    color: var(--primary-blue);
 }
 summary::after {
     font-size: 0.85em;
-    color: rgba(48,63,159, 0.25);
+    color: var(--secondary-text);
     display: inline-block;
     float: right;
     content: "Click to fold/unfold";
@@ -317,7 +329,7 @@ th {
 }
 td { padding: 0; }
 
-tr:nth-child(even) {background: #f9f9f9;}
+tr:nth-child(even) {background: var(--light-gray);}
 tr:nth-child(odd) {background: #ffffff;}
 tbody {
 /* border-bottom: 1px solid black; */
@@ -333,7 +345,7 @@ dd {
 div.back a {
     float: right;
     font-weight: 300;
-    color: #cccccc;
+    color: var(--secondary-text);
     font-variant: small-caps;
     margin-top: -2.5em;
 }
@@ -341,4 +353,5 @@ div.back a {
 
 hr {
     border-style: dashed;
+    border-color: var(--secondary-text);
 }
