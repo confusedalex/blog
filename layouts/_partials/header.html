@@ -15,13 +15,17 @@
     <link rel="pingback" href="https://webmention.io/confusedalex.dev/xmlrpc" />
     <title>{{ .Title }} | {{ .Site.Title }}</title>
 
-    {{ with resources.Match "css/*" }}
+        {{ if eq .Section "projects"}}
+        {{ $style := resources.Get "css/project-page.css" | minify | fingerprint }}
+     <link rel="stylesheet" href="{{ $style.Permalink }}">
+   {{ else }}
+    {{ with resources.Match "css/global/*" }}
       {{ with resources.Concat "css/style.css" . | minify | fingerprint }}
         <link rel="stylesheet" href="{{ .RelPermalink }}" />
       {{ end }}
-    {{ end }}
-
-
+        {{ end }}
+        {{end}}
+        
     <link rel="sitemap" href="/sitemap.xml" type="application/xml" />
     <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" />
