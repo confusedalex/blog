@@ -41,10 +41,6 @@ i, i a {
     color: var(--border-gray);
     font-style: normal;
 }
-.org-italic, .org-org-meta-line {
-    color: var(--primary-blue);
-    font-style: normal;
-}
 
 /* --- Side notes --- */
 div.side-note::before {
@@ -259,8 +255,6 @@ pre::before {
     font-variant: small-caps;
     content: "";
 }
-pre.src-lisp::before { content: "lisp"; }
-pre.src-org::before { content: "org"; }
 
 div.highlight > pre.chroma > code::before {
   content: attr(data-lang);
