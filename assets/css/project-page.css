@@ -38,6 +38,11 @@ a, a:visited {
     color: var(--primary-blue);
 }
 
+a:hover {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--accent-yellow);
+}
+
 i, i a {
     color: var(--border-gray);
     font-style: normal;
@@ -99,6 +104,10 @@ div.side-note {
                 width: 100%;
                 padding-left: 0;
                 line-height: 1.35em;
+            }
+            & a:hover {
+                color: var(--primary-blue);
+                border-bottom: 2px solid var(--accent-yellow);
             }
         }
     }
