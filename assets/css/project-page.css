@@ -87,7 +87,6 @@ div.side-note {
             counter-increment: list;
             content: counters(list, ".") ".";
             width: 2.0em;
-            margin-left: -2.0em;
             text-align: right;
             text-transform: uppercase;
             color: var(--primary-blue);
@@ -150,7 +149,6 @@ ul li::before {
     content: "— ";
     color: var(--border-gray);
     width: 1em;
-    margin-left: -1em;
 }
 
 ol {
