@@ -16,27 +16,27 @@
     --code-blue: light-dark(#0000a8, #86a5ff);
     --secondary-text: light-dark(#707070, #a0a0a0);
     --tertiary-text: light-dark(#4a4a4a, #e0e0e0);
+
+    --bg-color: light-dark(#ffffff, #121212);
     --light-gray: light-dark(#f5f5f5, #1e1e1e);
-    --lighter-gray: light-dark(#fafafa, #121212);
-    --border-gray: light-dark(#888888, #444444);
+    --lighter-gray: light-dark(#fafafa, #1a1a1a);
+    --border-gray: light-dark(#888888, #555555);
+
     --note-dark: light-dark(#1a1a1a, #f0f0f0);
     --note-medium: light-dark(#404040, #c0c0c0);
+
+    --shadow-color: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
 }
 
-.filter {
-    filter: brightness(0) saturate(100%) invert(51%) sepia(84%) saturate(2253%)
-        hue-rotate(167deg) brightness(100%) contrast(105%);
-}
-
+/* Base Adjustments */
 body {
     font-family: "Roboto Mono", monospace;
     font-size: 16px;
     font-weight: 300;
     color: var(--tertiary-text);
+    background-color: var(--bg-color);
     line-height: 1.4em;
-    font-weight: light;
-    counter-reset: section;
-    counter-reset: toc-section;
+    counter-reset: section toc-section;
     counter-increment: toc-section;
 }
 
@@ -47,7 +47,7 @@ a:visited {
 }
 
 a:hover {
-    color: var(--primary-blue);
+    color: var(--primary-blue-hover);
     border-bottom: 2px solid var(--accent-color);
 }
 
@@ -114,13 +114,12 @@ div.side-note {
                 line-height: 1.35em;
             }
             & a:hover {
-                color: var(--primary-blue);
+                color: var(--primary-blue-hover);
                 border-bottom: 2px solid var(--accent-color);
             }
         }
     }
     & h2:before {
-        content: "";
         content: "⌘";
         counter-reset: section;
     }
@@ -210,7 +209,7 @@ div.article-meta {
 }
 
 div.badges img {
-    height: 25;
+    height: 25px;
     padding-bottom: 2em;
 }
 
@@ -232,7 +231,7 @@ div.buttons {
         text-decoration: none;
         border-radius: 15px;
         transition: all 0.15s ease;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 6px var(--shadow-color);
     }
 
     span {
@@ -246,8 +245,8 @@ div.buttons {
 }
 
 a.button:hover {
-    background-color: #ffd500;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: var(--accent-hover);
+    box-shadow: 0 4px 10px var(--shadow-color);
 }
 
 span.subtitle {
@@ -255,7 +254,7 @@ span.subtitle {
     margin-top: 0.25em;
     font-size: 74.5%;
     font-weight: 300;
-    color: var(--border-gray);
+    color: var(--secondary-text);
 }
 
 h3 {
@@ -265,7 +264,6 @@ h1,
 h2,
 h3,
 h4 {
-    color: black;
     font-size: 1em;
     font-weight: 400;
     text-transform: uppercase;
@@ -284,17 +282,12 @@ h2::after {
 h2 {
     padding-top: 5em;
     display: inline-block;
+    counter-reset: subsection;
 }
 h3 {
     padding-top: 3em;
 }
 
-body {
-    counter-reset: section;
-}
-h2 {
-    counter-reset: subsection;
-}
 h2::before {
     color: var(--secondary-text);
     float: left;
@@ -384,6 +377,7 @@ summary::after {
 /* --- Table --- */
 table {
     min-width: 100%;
+    margin-top: 1em;
 }
 table,
 tbody,
@@ -393,13 +387,9 @@ th,
 colgroup,
 thead {
     border: 0;
-    /*    padding: 0;*/
-}
-table {
-    margin-top: 1em;
 }
 thead {
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dashed var(--border-gray);
 }
 th {
     text-align: left;
@@ -416,19 +406,14 @@ tr:nth-child(even) {
     background: var(--light-gray);
 }
 tr:nth-child(odd) {
-    background: #ffffff;
-}
-tbody {
-    /* border-bottom: 1px solid black; */
+    background: var(--bg-color);
 }
 
-/* --- Description list --- */
 dd {
     margin-top: 0.25em;
     margin-bottom: 0.5em;
 }
 
-/* --- Back links in header --- */
 div.back a {
     float: right;
     font-weight: 300;
@@ -436,7 +421,6 @@ div.back a {
     font-variant: small-caps;
     margin-top: -2.5em;
 }
-/* h2 { border-bottom: .5px solid #999999; } */
 
 hr {
     border-style: dashed;

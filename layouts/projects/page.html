@@ -64,7 +64,7 @@
       class="button"
       {{ end }}>
       <span>{{ .text }}
-        <img src="/icons/external-link.svg"/>
+        <img src="/icons/external-link.svg" {{ if not .button }} class="filter-white" {{end }} />
       </span>
     </a>
     {{end}}
