@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
+    <style>
+      :root {
+          --accent-color: {{ .Params.accent_color | default "#fac900" }};
+          }
+    </style>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="confusedalex's personal blog" />

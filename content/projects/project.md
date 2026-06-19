@@ -2,6 +2,7 @@
 title: "TheGoldEconomy"
 logo: "/tge-logo.png"
 subtitle: "A simple plugin"
+accent_color: "#fac900"
 
 badges:
   - alt: "Modrinth Downloads"
