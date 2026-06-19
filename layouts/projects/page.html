@@ -39,22 +39,37 @@
     <img alt="{{ .Title }} logo" itemprop="url" src="{{ .Params.logo  }}" />
     <h1 class="title">{{ .Title | markdownify }}
     </br>
-    <span class="subtitle">A simple plugin</span>
+    <span class="subtitle">{{ .Params.subtitle }}</span>
     </h1>
   </div>
+  {{ if .Params.badges }}
   <div class="badges">
-    <img alt="Modrinth Downloads" src="https://img.shields.io/modrinth/dt/thegoldeconomy?style=for-the-badge&labelColor=%23000000&color=%23fac900">
-    <img alt="Spiget Rating" src="https://img.shields.io/spiget/rating/102242?style=for-the-badge&labelColor=%23000000&color=%23fac900">
-    <img alt="Spiget tested server versions" src="https://img.shields.io/spiget/tested-versions/102242?style=for-the-badge&labelColor=%23000000&color=%23fac900">
+    {{ range .Params.badges }}
+      <img alt="{{ .alt }}" src="{{ .src }}">
+    {{ end }}
   </div>
+  {{ end }}
+  {{ if .Params.buttons }}
   <div class="buttons">
-    <a href="https://modrinth.com/plugin/thegoldeconomy" class="button"><span>Download on Modrinth <img src="/icons/external-link.svg"/></span></a>
-    <a href=""><span>View on Github <img src="/icons/external-link.svg"/></span></a>
+    {{ range .Params.buttons}}
+    <a
+      href="{{ .link }}"
+      {{ if .button }}
+      class="button"
+      {{ end }}>
+      <span>{{ .text }}
+        <img src="/icons/external-link.svg"/>
+      </span>
+    </a>
+    {{end}}
   </div>
+  {{ end }}
+  {{ if .Params.toc }}
 <div id="TableOfContents" role="doc-toc">
   <h2>Table of Contents</h2>
   {{ .TableOfContents }}
 </div>
+{{ end }}
 <main>{{ .Content }}</main>
 <br>
 <hr>

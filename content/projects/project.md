@@ -1,16 +1,23 @@
 ---
 title: "TheGoldEconomy"
-params:
-  logo: "/tge-logo.png"
+logo: "/tge-logo.png"
+subtitle: "A simple plugin"
+
+badges:
+  - alt: "Modrinth Downloads"
+    src: "https://img.shields.io/modrinth/dt/thegoldeconomy?style=for-the-badge&labelColor=%23000000&color=%23fac900"
+  - alt: "Spiget Rating"
+    src: "https://img.shields.io/spiget/rating/102242?style=for-the-badge&labelColor=%23000000&color=%23fac900"
+  - alt: "Spiget tested server versions"
+    src: "https://img.shields.io/spiget/tested-versions/102242?style=for-the-badge&labelColor=%23000000&color=%23fac900"
+    
+buttons:
+  - text: "Download on Modrinth"
+    link: "https://modrinth.com/plugin/thegoldeconomy"
+    button: true
+  - text: "View on GitHub"
+    link: "https://github.com/confusedalex/GoldEconomy"
 ---
-
-<!-- ![Modrinth Downloads](https://img.shields.io/modrinth/dt/thegoldeconomy) -->
-<!-- ![Spiget Rating](https://img.shields.io/spiget/rating/102242) -->
-<!-- ![Spiget tested server versions](https://img.shields.io/spiget/tested-versions/102242) -->
-<!-- ![Weblate project translated](https://img.shields.io/weblate/progress/thegoldeconomy) -->
-
-<!-- ![TheGoldEconomy Logo](https://github.com/user-attachments/assets/dd12ed0c-3058-4b1f-b12f-478c780730f4) -->
-
 ## Introduction
 
 TheGoldEconomy is a powerful economy plugin that allows servers to manage their gold-based currency through a bank system. Players can deposit and withdraw gold and send money to each other. With support for both gold nuggets, ingots and raw gold this plugin is designed to be lightweight, easy to configure, and fully compatible with popular plugins like Vault and Towny.
