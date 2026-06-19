@@ -22,6 +22,10 @@
     --note-dark: light-dark(#1a1a1a, #f0f0f0);
     --note-medium: light-dark(#404040, #c0c0c0);
 }
+
+.filter {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(84%) saturate(2253%)
+        hue-rotate(167deg) brightness(100%) contrast(105%);
 }
 
 body {
