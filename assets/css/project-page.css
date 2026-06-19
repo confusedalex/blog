@@ -190,6 +190,7 @@ div.article-meta {
     margin-bottom: 0em;
     display: flex;
     align-items: center;
+    padding-bottom: 1em;
 
     & h1.title {
         font-size: 1.5em;
