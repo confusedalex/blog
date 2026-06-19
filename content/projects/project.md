@@ -3,14 +3,15 @@ title: "TheGoldEconomy"
 logo: "/tge-logo.png"
 subtitle: "A simple plugin"
 accent_color: "#fac900"
+toc: true
 
 badges:
   - alt: "Modrinth Downloads"
-    src: "https://img.shields.io/modrinth/dt/thegoldeconomy?style=for-the-badge&labelColor=%23000000&color=%23fac900"
+    src: "https://img.shields.io/modrinth/dt/thegoldeconomy?style=for-the-badge&labelColor=%23555555&color=%23fac900"
   - alt: "Spiget Rating"
-    src: "https://img.shields.io/spiget/rating/102242?style=for-the-badge&labelColor=%23000000&color=%23fac900"
+    src: "https://img.shields.io/spiget/rating/102242?style=for-the-badge&labelColor=%23555555&color=%23fac900"
   - alt: "Spiget tested server versions"
-    src: "https://img.shields.io/spiget/tested-versions/102242?style=for-the-badge&labelColor=%23000000&color=%23fac900"
+    src: "https://img.shields.io/spiget/tested-versions/102242?style=for-the-badge&labelColor=%23555555&color=%23fac900"
     
 buttons:
   - text: "Download on Modrinth"
