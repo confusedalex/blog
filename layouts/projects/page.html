@@ -42,7 +42,7 @@
 
 <div class="content" id="content">
   <div class="article-meta">
-    <img alt="{{ .Title }} logo" itemprop="url" src="{{ .Params.logo  }}" />
+    <img alt="{{ .Title }} logo" {{ if .Params.round }} class="round" {{ end }} src="{{ .Params.logo  }}" />
     <h1 class="title">{{ .Title | markdownify }}
     </br>
     <span class="subtitle">{{ .Params.subtitle }}</span>
