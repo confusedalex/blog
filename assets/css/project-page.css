@@ -280,12 +280,9 @@ h2::after {
 }
 
 h2 {
-    padding-top: 5em;
+    padding-top: 2em;
     display: inline-block;
     counter-reset: subsection;
-}
-h3 {
-    padding-top: 3em;
 }
 
 h2::before {
@@ -425,4 +422,10 @@ div.back a {
 hr {
     border-style: dashed;
     border-color: var(--secondary-text);
+}
+
+@media (prefers-color-scheme: dark) {
+    .filter-white {
+        filter: brightness(0) invert(100%);
+    }
 }
