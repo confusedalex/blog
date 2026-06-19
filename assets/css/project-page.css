@@ -9,17 +9,19 @@
 @import url("https://fonts.googleapis.com/css?family=Inter:400,500");
 
 :root {
-    --primary-blue: #1a3a96;
-    --primary-blue-hover: #0d1f52;
-    --secondary-text: #707070;
-    --tertiary-text: #4a4a4a;
-    --light-gray: #f5f5f5;
-    --lighter-gray: #fafafa;
-    --code-blue: #0000a8;
-    --border-gray: #888888;
-    --note-dark: #1a1a1a;
-    --note-medium: #404040;
-    --accent-yellow: #fac900;
+    color-scheme: light dark;
+
+    --primary-blue: light-dark(#1a3a96, #4d76eb);
+    --primary-blue-hover: light-dark(#0d1f52, #7092ff);
+    --code-blue: light-dark(#0000a8, #86a5ff);
+    --secondary-text: light-dark(#707070, #a0a0a0);
+    --tertiary-text: light-dark(#4a4a4a, #e0e0e0);
+    --light-gray: light-dark(#f5f5f5, #1e1e1e);
+    --lighter-gray: light-dark(#fafafa, #121212);
+    --border-gray: light-dark(#888888, #444444);
+    --note-dark: light-dark(#1a1a1a, #f0f0f0);
+    --note-medium: light-dark(#404040, #c0c0c0);
+}
 }
 
 body {
