@@ -5,7 +5,8 @@
  */
 
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Inter:400,500");
 
 :root {
     --primary-blue: #1a3a96;
@@ -33,7 +34,8 @@ body {
     counter-increment: toc-section;
 }
 
-a, a:visited {
+a,
+a:visited {
     text-decoration: none;
     color: var(--primary-blue);
 }
@@ -43,7 +45,8 @@ a:hover {
     border-bottom: 2px solid var(--accent-yellow);
 }
 
-i, i a {
+i,
+i a {
     color: var(--border-gray);
     font-style: normal;
 }
@@ -57,7 +60,7 @@ div.side-note::before {
 div.side-note {
     color: var(--note-medium);
     float: left;
-    font-size: .85em;
+    font-size: 0.85em;
     line-height: 1.25em;
     margin-left: -24em;
     width: 20em;
@@ -74,7 +77,7 @@ div.side-note {
         list-style: none;
         counter-reset: list 0;
         & ul {
-            padding-left:0em;
+            padding-left: 0em;
             font-weight: 300;
             font-size: 90%;
             line-height: 1.5em;
@@ -116,9 +119,9 @@ div.side-note {
         counter-reset: section;
     }
     & h2 {
-    font-size: 1em;
-    font-weight: 400;
-    padding-top: 5em;
+        font-size: 1em;
+        font-weight: 400;
+        padding-top: 2em;
     }
 }
 
@@ -131,11 +134,11 @@ blockquote {
 }
 
 ul {
-    padding-left: 0
+    padding-left: 0;
 }
-ul li  {
+ul li {
     list-style-type: none;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 }
 
 ul li p {
@@ -157,9 +160,9 @@ ol {
     list-style: none;
     counter-reset: li;
 }
-ol li  {
+ol li {
     counter-increment: li;
-    margin-bottom: .25em;
+    margin-bottom: 0.25em;
 }
 ol li::before {
     content: counter(li) ". ";
@@ -183,9 +186,9 @@ div.article-meta {
     align-items: center;
 
     & h1.title {
-    font-size: 1.5em;
-    font-weight: 400;
-    text-align: left;
+        font-size: 1.5em;
+        font-weight: 400;
+        text-align: left;
     }
 
     & img {
@@ -196,20 +199,60 @@ div.article-meta {
 
 div.badges img {
     height: 25;
+    padding-bottom: 2em;
 }
 
+div.buttons {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: center;
+    & a {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+    }
+    & a.button {
+        display: inline-block;
+        padding: 0.65em 1em;
+        background-color: var(--accent-yellow);
+        color: #000000;
+        border: none;
+        text-decoration: none;
+        border-radius: 15px;
+        transition: all 0.15s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    span {
+        display: flex;
+        gap: 7px;
+        justify-content: center;
+        & img {
+            height: 20px;
+        }
+    }
+}
+
+a.button:hover {
+    background-color: #ffd500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
 span.subtitle {
     display: inline-block;
-    margin-top: .25em;
+    margin-top: 0.25em;
     font-size: 74.5%;
     font-weight: 300;
     color: var(--border-gray);
 }
 
-
-h3 { padding-top: .5em; }
-h1, h2, h3, h4 {
+h3 {
+    padding-top: 0.5em;
+}
+h1,
+h2,
+h3,
+h4 {
     color: black;
     font-size: 1em;
     font-weight: 400;
@@ -225,18 +268,20 @@ h2::after {
     background-color: var(--accent-yellow);
     margin-top: 0.25em;
 }
-    
-h2 { 
+
+h2 {
     padding-top: 5em;
     display: inline-block;
 }
-h3 { padding-top: 3em; }
+h3 {
+    padding-top: 3em;
+}
 
 body {
-  counter-reset: section;
+    counter-reset: section;
 }
 h2 {
-  counter-reset: subsection;
+    counter-reset: subsection;
 }
 h2::before {
     color: var(--secondary-text);
@@ -244,11 +289,10 @@ h2::before {
     text-align: right;
     font-weight: 300;
     width: 7.5em;
-    margin-left: -8.0em;
+    margin-left: -8em;
     counter-increment: section;
     content: "Chapter " counter(section) " ";
 }
-
 
 h3::before {
     color: var(--secondary-text);
@@ -256,7 +300,7 @@ h3::before {
     text-align: right;
     font-weight: 300;
     width: 2.5em;
-    margin-left: -3.0em;
+    margin-left: -3em;
     counter-increment: subsection;
     content: counter(section) "." counter(subsection) " ";
 }
@@ -272,14 +316,14 @@ pre::before {
     float: left;
     text-align: right;
     font-weight: 300;
-    width: 3.0em;
+    width: 3em;
     margin-left: -4.25em;
     font-variant: small-caps;
     content: "";
 }
 
 div.highlight > pre.chroma > code::before {
-  content: attr(data-lang);
+    content: attr(data-lang);
 }
 
 pre {
@@ -306,8 +350,8 @@ details {
     border: 1px solid var(--primary-blue);
     border-left: 4px solid var(--accent-yellow);
     border-radius: 3px;
-    padding:  0.25em;
-    margin-bottom: 1.0em;
+    padding: 0.25em;
+    margin-bottom: 1em;
 }
 details pre {
     border: 0;
@@ -322,14 +366,22 @@ summary::after {
     display: inline-block;
     float: right;
     content: "Click to fold/unfold";
-    padding-right:  0.5em;
+    padding-right: 0.5em;
 }
 
 /* --- Table --- */
-table { min-width: 100%; }
-table, tbody, td, tr, th, colgroup, thead {
+table {
+    min-width: 100%;
+}
+table,
+tbody,
+td,
+tr,
+th,
+colgroup,
+thead {
     border: 0;
-/*    padding: 0;*/
+    /*    padding: 0;*/
 }
 table {
     margin-top: 1em;
@@ -344,18 +396,24 @@ th {
     margin-bottom: 0.25em;
     padding-bottom: 0.25em;
 }
-td { padding: 0; }
+td {
+    padding: 0;
+}
 
-tr:nth-child(even) {background: var(--light-gray);}
-tr:nth-child(odd) {background: #ffffff;}
+tr:nth-child(even) {
+    background: var(--light-gray);
+}
+tr:nth-child(odd) {
+    background: #ffffff;
+}
 tbody {
-/* border-bottom: 1px solid black; */
+    /* border-bottom: 1px solid black; */
 }
 
 /* --- Description list --- */
 dd {
     margin-top: 0.25em;
-    margin-bottom: 0.50em;
+    margin-bottom: 0.5em;
 }
 
 /* --- Back links in header --- */
