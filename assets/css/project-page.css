@@ -89,7 +89,7 @@ div.side-note {
             display: inline-block;
             counter-increment: list;
             content: counters(list, ".") ".";
-            width: 2.0em;
+            width: 2em;
             text-align: right;
             text-transform: uppercase;
             color: var(--primary-blue);
@@ -98,8 +98,8 @@ div.side-note {
             vertical-align: top;
             display: inline-block;
             width: 32%;
-            &  ul li:before {
-                content: ""
+            & ul li:before {
+                content: "";
             }
             & ul li {
                 display: static;
