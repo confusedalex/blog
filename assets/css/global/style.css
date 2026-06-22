@@ -8,6 +8,7 @@
         @import 'syntax-dark.css';
         color-scheme: dark;
     }
+    --bg-color: light-dark(#ffffff, #1c1b21);
     --secondary-bg: light-dark(#eee, #333);
     --border-color: light-dark(#ddd, #444);
     --border-color-strong: light-dark(#666, #888);
@@ -18,6 +19,10 @@
     --active-overlay: #0006;
     --pressed-overlay: #0003;
     --pressed-shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--bg-color);
 }
 
 .content {
