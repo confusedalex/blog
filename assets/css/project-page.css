@@ -11,9 +11,9 @@
 :root {
     color-scheme: light dark;
 
-    --primary-blue: light-dark(#1a3a96, #4d76eb);
+    --primary-blue: light-dark(#1a3a96, #77A5FE);
     --primary-blue-hover: light-dark(#0d1f52, #7092ff);
-    --code-blue: light-dark(#0000a8, #86a5ff);
+    --code-blue: light-dark(#0000a8, #77A5FE);
     --secondary-text: light-dark(#707070, #a0a0a0);
     --tertiary-text: light-dark(#4a4a4a, #e0e0e0);
 
