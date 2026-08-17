@@ -101,9 +101,12 @@ div.side-note {
             color: var(--primary-blue);
         }
         & li {
+            box-sizing: border-box;
             vertical-align: top;
             display: inline-block;
             width: 32%;
+            padding-left: 2em;
+            text-indent: -2em;
             & ul li:before {
                 content: "";
             }
